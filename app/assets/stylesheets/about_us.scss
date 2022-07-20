@@ -1,0 +1,27 @@
+*{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ .nav_bar {
+    margin-left: 57%;
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.nav_bar li{
+    margin-left: 5%;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+}
+
+.nav_bar li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar li a:hover{
+    color: #EC652B;
+}
