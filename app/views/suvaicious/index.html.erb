@@ -16,118 +16,171 @@
 
 <div>
   <%=image_tag 'logo.png' ,alt:'logo', class: 'logo' %>
-  </%=image_tag>
 </div>
+
 <p class="slogan">Healthy food ,<span class="slogan2">Good Suvai!!</span></p>
 
 <div>
-  <p class="phrase">
-    <span class="quotation">"</span>We take care of all your nutrition worries to ensure that you have your
-    tummies filled with healthy, scrumptious and homely food.<span class="quotation">"</span>
-  </p>
-  <div>
-    <div>
-      <button class="login">Login</button><button class="restaurant_button">Add Restaurant</button>
-    </div>
+    <p class="phrase"><span class="quotation">"</span>We take care of all your nutrition worries to ensure that you have your
+       tummies filled with healthy, scrumptious and homely food.<span class="quotation">"</span>
+    </p>
+<div>
 
-    <div id="buyer_heading">
-      <span>Buyer</span>
-      <%=image_tag 'customer.png' ,alt:'buyer_logo', class:'buyer_logo' %>
+<div>
+   <a href="login" ><button class="login">Login</button><button class="restaurant_button">Add Restaurant</button></a>
+</div>
+
+<div id="buyer_heading">
+    <span>Buyer</span>
+      <%=image_tag 'buyer.png' ,alt:'buyer_logo', class:'buyer_logo' %>
         <p class="buyer_phrase">Hungry? Why wait? Grab a healthy, home made food.</p>
-        <div class="buyer_div_blocks">
-          <div class="buyer_1"><br><span class="buyer_point_1"> Homemade authentic dishes delivered at your
-              doorstep!</span></div>
-          <div class="buyer_2"><br><span class="buyer_point_2"> Personalized cooking by FSSAI-certified chefs!</span>
-          </div>
-          <div class="buyer_3"><br><span class="buyer_point_3">Corporate Events / Parties - Our chefs cook for all
-              occasions!</span></div>
-          <%=image_tag 'buyer_1.png' ,alt:'logo', class:'buyer_image1' %><br>
-            <%=image_tag 'buyer_2.png' ,alt:'logo', class:'buyer_image2' %><br>
-              <%=image_tag 'buyer_3.png' ,alt:'logo', class:'buyer_image3' %>
+          <div class="buyer_div_blocks">
+             <div class="buyer_1"><br><span class="buyer_point_1"> Homemade authentic dishes delivered at your doorstep!</span></div>
+             <div class="buyer_2"><br><span class="buyer_point_2"> Personalized cooking by FSSAI-certified chefs!</span></div>
+             <div class="buyer_3"><br><span class="buyer_point_3">Corporate Events / Parties - Our chefs cook for all occasions!</span></div>
+                 <%=image_tag 'buyer_1.png' ,alt:'logo', class:'buyer_image1' %><br>
+                 <%=image_tag 'buyer_2.png' ,alt:'logo', class:'buyer_image2' %><br>
+                 <%=image_tag 'buyer_3.png' ,alt:'logo', class:'buyer_image3' %>         
+</div>
 
-             
-        </div>
-        <div><iframe class="buyers_video" src="https://www.youtube.com/embed/SKqYoyN99lY" title="YouTube video player"
-            width="600" height="370" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe></div>
-
+<div><iframe class="buyers_video" src="https://www.youtube.com/embed/SKqYoyN99lY" title="YouTube video player" width="600" height="370" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div><span class="registration_heading">Save time & money with subscription orders!</span></div>
         <div><button class="subscription_button">Plan your monthly/weekly order</button></div>
         <div class="buyers_testimonial"><span>Buyers Testimonial</span></div>
-        <!-- </div>
-  <div class="buyers_div">
-    <div class="buyers_image_div">
-      <%=image_tag 'buyer_image.jpg' ,alt:'buyer_image', class: 'buyer_image' %>
+</div>
+
+<div class="parent_grid">
+     <div id="child_grid_1">
+       <%=image_tag 'reviewer_1' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Haiden</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_1_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"The food was top notch and gives the feel of home. I would definitely recommend this kitchen."</p>
     </div>
-    <p class="about_buyers">
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum."
-    </p>
-  </div> -->
-        <!-- <div id="seller_heading">
-    <span>seller</span> <%=image_tag 'seller.png' ,alt:'seller_logo', class:'seller_logo' %>
-  </div>
-  <div class="seller_div">
-    <div class="sellers_image_div">
-      <%# <%=image_tag '#' ,alt:'seller_image', class: 'seller_image' %> %>
+
+    <div id="child_grid_2">
+       <%=image_tag 'reviewer_2' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Aswath</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_2_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">“We enjoyed the Eggs Benedict served on homemade focaccia bread and hot coffee.</p>
     </div>
-    <p class="about_buyers">
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum."
-    </p>
-  </div> -->
 
-
-
-
-
-        <!-- <div>
-  <p class="about_suvaicious">
-    Missing home food? You have come to the right place. Suvaicious is a
-    platform where we connect homemakers and hungry customers for an amazing
-    culinary experience. At Suvaicious, we ensure that high quality home cooked
-    meals are delivered to you in a timely and efficient manner. We source our
-    food from the best home chefs in Chennai who are looking to put their
-    cooking skills to good use while earning some money too. We also guarantee
-    that the food is delivered to your doorstep. Check out our website for more
-    details… Bon Appetit!!!
-  </p>
-</div> -->
-
-        <%# < div>
-        </%#>
-      </%=image_tag>
+   <div id="child_grid_3">
+       <%=image_tag 'reviewer_3' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Annamalai</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_3_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">Very helpful during these challenging covid times, to get healthy home food and quick delivery.</p>
     </div>
-  </div> %>
+</div>
 
-  <div id="seller_heading">
-    <span>Seller</span>
-    <%=image_tag 'seller.png' ,alt:'seller_logo', class:'seller_logo' %>
-      <div class="seller_div_blocks">
-        <div class="seller_1"><br><span class="seller_point_1">Earn minimum ₹25,000/- monthly by serving healthy home food</span></div>
-        <div class="seller_2"><br><span class="seller_point_2"></span>Guaranteed weekly payments</div>
-        <div class="seller_3"><br><span class="seller_point_3"></span>Our customer support is your online backbone</div>
-        <%=image_tag 'seller_1.png' ,alt:'logo', class:'seller_image1'%><br>
-        <%=image_tag 'seller_2.png' ,alt:'logo', class:'seller_image2'%><br>
-        <%=image_tag 'seller_3.png' ,alt:'logo', class:'seller_image3'%> 
+<div class="parent_grid">
+     <div id="second_child_grid1">
+       <%=image_tag 'reviewer_4' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >santhanu</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_4_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"All food gives the home made taste. Surely I will order again. This app was really nice. Very useful for the homemakers."</p>
+    </div>
 
-      
-      </div>
-      <div><iframe class="seller_video" src="https://www.youtube.com/embed/pZFAw7Q3Zyk" title="YouTube video player" width="600" height="370"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe></div>
-  
-  </div>
-</div> 
+    <div id="second_child_grid2">
+       <%=image_tag 'reviewer_5' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Venkat</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_5_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"Suzhiyam taste was super. Beetroot halwa was so good and the masal vadai was so crispy and taste. Will order again."</p>
+    </div>
+
+   <div id="second_child_grid3">
+       <%=image_tag 'reviewer_6' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Prassanna</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_6_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"The Idiyappam with coconut milk was really good, soft nd non sticky. Authentic home style cooking. True to their claim! Highly recommended."</p>
+    </div>
+</div>
+</div>
+
+<div class="parent_grid">
+     <div id="third_child_grid1">
+       <%=image_tag 'reviewer_7' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Annapoorni</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_7_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"Simply one word to say I am very much impressed 100 %worth really homemade."</p>
+    </div>
+
+    <div id="third_child_grid2">
+       <%=image_tag 'reviewer_8' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Sangeetha</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_8_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"Ordered fish curry and rasam. The taste of the fish curry was so yum and the quantity was also so sufficient. Must try food it is. Rasam was good and my kids loved it."</p>
+    </div>
+
+   <div id="third_child_grid3">
+       <%=image_tag 'reviewer_9' ,alt:'reviewer', class:"reviewer" %><span class="reviewer_name" >Kasi Antony</span>
+       <%=image_tag 'rating.png' ,alt:'rating', class:"rating" %>
+       <%=image_tag 'review_9_food.jpg' ,alt:'food', class:"food_image" %> 
+       <p class="reviews_about_food">"Wonderful & dedicated preparation, Makes a huge difference from a normal hotel food and a Home made hygienic food."</p>
+    </div>
+</div>
+</div>
+
+
+<div class="slider_button_div">
+    <button onclick="get1('first_grid')" id="slider_button1"></button>
+    <button onclick="get2('second_grid')" id="slider_button2"></button>
+    <button onclick="get3('third_grid')" id="slider_button3"></button>
+</div>
+
+
+
+<script>
+  function get1() {
+        document.getElementById("child_grid_1").style.display = "block";
+        document.getElementById("child_grid_2").style.display = "block";
+        document.getElementById("child_grid_3").style.display = "block";   
+        document.getElementById("second_child_grid1").style.display = "none";
+        document.getElementById("second_child_grid2").style.display = "none";
+        document.getElementById("second_child_grid3").style.display = "none";   
+        document.getElementById("third_child_grid1").style.display = "none";
+        document.getElementById("third_child_grid2").style.display = "none";
+        document.getElementById("third_child_grid3").style.display = "none"; 
+       
+
+}
+
+function get2() {
+        document.getElementById("child_grid_1").style.display = "none";
+        document.getElementById("child_grid_2").style.display = "none";
+        document.getElementById("child_grid_3").style.display = "none";   
+        document.getElementById("second_child_grid1").style.display = "block";
+        document.getElementById("second_child_grid2").style.display = "block";
+        document.getElementById("second_child_grid3").style.display = "block";   
+        document.getElementById("third_child_grid1").style.display = "none";
+        document.getElementById("third_child_grid2").style.display = "none";
+        document.getElementById("third_child_grid3").style.display = "none"; 
+
+}
+
+function get3() {
+        document.getElementById("child_grid_1").style.display = "none";
+        document.getElementById("child_grid_2").style.display = "none";
+        document.getElementById("child_grid_3").style.display = "none";   
+        document.getElementById("second_child_grid1").style.display = "none";
+        document.getElementById("second_child_grid2").style.display = "none";
+        document.getElementById("second_child_grid3").style.display = "none";   
+        document.getElementById("third_child_grid1").style.display = "block";
+        document.getElementById("third_child_grid2").style.display = "block";
+        document.getElementById("third_child_grid3").style.display = "block"; 
+}
+</script>
+
+<div class="seller_whole_div">
+<div id="seller_heading">
+       <span>Seller</span>
+          <%=image_tag 'seller.png' ,alt:'seller_logo', class:'seller_logo' %>
+             <div class="seller_div_blocks">
+                <div class="seller_1"><br><span class="seller_point_1">Earn minimum ₹25,000/- monthly by serving healthy home food</span></div>
+                <div class="seller_2"><br><span class="seller_point_2"></span>Guaranteed weekly payments</div>
+                  <div class="seller_3"><br><span class="seller_point_3"></span>Our customer support is your online backbone</div>
+                    <%=image_tag 'seller_1.png' ,alt:'logo', class:'seller_image1'%><br>
+                    <%=image_tag 'seller_2.png' ,alt:'logo', class:'seller_image2'%><br>
+                    <%=image_tag 'seller_3.png' ,alt:'logo', class:'seller_image3'%> 
+                  </div>
+                      <div><iframe class="seller_video" src="https://www.youtube.com/embed/pZFAw7Q3Zyk" title="YouTube video player" width="600" height="370" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>

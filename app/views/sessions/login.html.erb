@@ -1,0 +1,24 @@
+<style>
+ body{
+     background-color:#CAF1DE;
+ }
+</style>
+<div>
+ <%=image_tag 'register_bg_img' ,alt:'bg_img', class: 'bg_img' %>
+</div>
+<div><a href="home" ><%=image_tag 'home_icon.png',alt:'home_icon', id: 'home_icon' %></a></div>
+<div id="login-div">
+
+         <%=image_tag 's_logo.png' ,alt:'login_img', class: 'login_img' %>
+             <span class="form_heading">Sign in</span>
+             <div class="login_form_sign_in">  
+             <%= form_with(model: @log, url: sessions_path, method: "POST") do |form| %>
+             <%= form.email_field :email, id: "email_id", placeholder: "Email id",class: "input_user" ,:required => true  %><br>
+             <%= form.password_field :password, id: "pass", placeholder: "Password",class: "input_user" ,:required => true  %><br>
+             <i class="far fa-eye" id="togglePassword"></i><span id="show_password" >Show Password</span>
+             <a class="forget_pass" href="#!">Forgot password?</a>
+             <%= form.submit "Sign In", class:"loginBtn" %>
+             <% end %>
+             <span class="text_qs">Dont have an account? <a onclick="show_register()"  href="register"><span id="register">Register</span></a></span>
+          </div>
+</div>

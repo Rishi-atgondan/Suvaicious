@@ -1,0 +1,49 @@
+<style>
+
+ body{
+     background-color:#CAF1DE;
+ }
+</style>
+<div>
+ <%=image_tag 'register_bg_img' ,alt:'bg_img', class: 'bg_img' %>
+</div>
+<div><a href="home" ><%=image_tag 'home_icon.png',alt:'home_icon', id: 'home_icon' %></a></div>
+
+
+<div id = "register-div">
+         <div><a href="login"><%=image_tag 'left-arrow.png',alt:'left_arrow', id: 'left_arrow' %></a></div> 
+            <span class="form_heading_sign_up">Sign Up</span>
+                <div class="login_form_sign_up">  
+                    <%= form_with(model: @user, url: "/create", method: "POST") do |form| %>
+                    <%= form.email_field :email, id: "email", placeholder: "Email id",class: "input_user" ,:required => true  %><br>             
+                    <%= form.text_field :firstname, id: "firstname", placeholder: "First Name",class: "input_user" ,:required => true  %><br> 
+                    <%= form.text_field :lastname, id: "lastname", placeholder: "Last Name",class: "input_user" ,:required => true  %><br> 
+                    <%= form.telephone_field :ph_number, id: "ph_number", placeholder: "Ph no",class: "input_user" ,:required => true  %><br> 
+                    <%= form.password_field :password, id: "password", placeholder: "Create Password",class: "input_user" ,:required => true  %><br>
+                    <%= form.password_field :confirm_password, id: "confirm_password", placeholder: "Confirm Password",class: "input_user" ,:required => true  %><br> 
+                    <%= form.submit "Submit", class:"signUpBtn" %>   
+                    <% end %>
+</div>
+</div>
+<script>
+
+// function show_register() {
+//   document.getElementById("login-div").style.display = "none";
+//   document.getElementById("register-div").style.display = "block";
+// }
+// function show_login() {
+//   document.getElementById("login-div").style.display = "block";
+//   document.getElementById("register-div").style.display = "none";
+// }
+// document.getElementById('left_arrow').addEventListener('click', show_login);
+// const togglePassword = document.querySelector('#togglePassword');
+// const password = document.querySelector('#pass');
+
+togglePassword.addEventListener('click', function (e) {
+  // toggle the type attribute
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  // toggle the eye slash icon
+  this.classList.toggle('fa-eye-slash');
+});
+</script> 

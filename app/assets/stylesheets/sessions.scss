@@ -1,0 +1,104 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.bg_img{
+    margin-top: 80px;
+    margin-left: 300px;
+    height: 600px;
+    width: 900px;
+    border-radius: 5px;
+    box-shadow:0px 0px 10px 10px #919191;
+   
+}
+
+#home_icon{
+    height: 25px;
+    width: 25px;
+    margin-left: 1160px;
+    margin-top: -600px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.login_img{
+   height: 150px;
+   width: 150px;
+   margin-left:890px;
+   margin-top: -235px; 
+   position: absolute;
+   border-radius: 150px;
+   box-shadow:0px 0px 10px 10px #919191;
+}
+
+.form_heading{
+   margin-left:780px;
+   margin-top: -50px; 
+   font-size: 30px;
+   font-family: sans-serif;
+   position: absolute;
+}
+
+.login_form_sign_in{
+    margin-left: 780px;
+    margin-top: -310px;
+}
+
+.input_user{
+    height: 30px;
+    margin-top: 30px;
+    width: 380px;
+    border: 2px solid #919191;
+    font-size: 13;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.forget_pass{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 270px;
+    font-size: 13px;
+}
+
+.loginBtn{
+    height: 40px;
+    width: 100px;
+    margin-top: 50px;
+    background-color:#0d6cfd;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.text_qs{
+    margin-top: 15px;
+    font-size: 13px;
+    color: #454545 ;
+    font-family: sans-serif;
+}
+
+#togglePassword{
+    margin-top: 10px;
+    margin-left: 7px;
+    font-size: 16px;
+    position:absolute;
+}
+
+#show_password{
+    font-size: 13px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+#register{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
