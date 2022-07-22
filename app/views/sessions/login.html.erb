@@ -15,7 +15,7 @@
              <%= form_with(model: @log, url: sessions_path, method: "POST") do |form| %>
              <%= form.email_field :email, id: "email_id", placeholder: "Email id",class: "input_user" ,:required => true  %><br>
              <%= form.password_field :password, id: "pass", placeholder: "Password",class: "input_user" ,:required => true  %><br>
-             <i class="far fa-eye" id="togglePassword"></i><span id="show_password" >Show Password</span>
+             <i class="far fa-eye" id="togglePassword"></i>
              <a class="forget_pass" href="#!">Forgot password?</a>
              <%= form.submit "Sign In", class:"loginBtn" %>
              <% end %>
