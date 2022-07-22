@@ -22,3 +22,15 @@
              <span class="text_qs">Dont have an account? <a onclick="show_register()"  href="register"><span id="register">Register</span></a></span>
           </div>
 </div>
+
+<script>
+let password = document.querySelector('#pass');
+
+document.querySelector('#togglePassword').addEventListener('click', function (e) {
+  // toggle the type attribute
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  // toggle the eye slash icon
+  this.classList.toggle('fa-eye-slash');
+});
+</script> 
