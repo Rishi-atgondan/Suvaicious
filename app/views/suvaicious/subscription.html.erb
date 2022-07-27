@@ -14,43 +14,53 @@
      <%= form_with(url: "/subscription", method: "POST") do |form|%>
     <div>
         <span class="name">Name<span class="required_symbol">*</span></span>
-       <%= form.text_field :name, id: "name", placeholder: "Enter your Name",class: "input_user1" ,:required => true  %><br> 
+       <%= form.text_field "subscription[name]", id: "name", placeholder: "Enter your Name",class: "input_user1" ,:required => true  %><br> 
     </div>
     <div>
         <span class="ph_num">Mobile Number<span class="required_symbol">*</span></span>
-        <%= form.telephone_field :mobile_number, id: "ph_number", placeholder: "Ph no",class: "input_user2" ,:required => true  %><br> 
+        <%= form.telephone_field "subscription[mobile_number]", id: "ph_number", placeholder: "Ph no",class: "input_user2" ,:required => true  %><br> 
     </div>
     <div>
         <span class="mail_id">Email Address<span class="required_symbol">*</span></span>
-        <%= form.email_field :email, id: "email", placeholder: "Enter email",class: "input_user3" ,:required => true  %><br> 
+        <%= form.email_field "subscription[email]", id: "email", placeholder: "Enter email",class: "input_user3" ,:required => true  %><br> 
     </div>
     <div>
         <span class="persons_subs">No. of. Persons for subscription<span class="required_symbol">*</span></span>
-        <%= form.number_field :no_of_persons, id: "no_of_persons", placeholder: "Enter No. Of. Persons for Subscription",class: "input_user4" ,:required => true  %><br> 
+        <%= form.number_field "subscription[no_of_persons]", id: "no_of_persons", placeholder: "Enter No. Of. Persons for Subscription",class: "input_user4" ,:required => true  %><br> 
     </div>
      <div>
         <span class="location">Location<span class="required_symbol">*</span></span>
-        <%= form.text_field :location, id: "location", placeholder: "Enter Location",class: "input_user5" ,:required => true  %><br> 
+        <%= form.text_field "subscription[location]", id: "location", placeholder: "Enter Location",class: "input_user5" ,:required => true  %><br> 
     </div>
     <div>
-        <span class="address">Address<span class="required_symbol">*</span></span>
-        <%= form.text_area :address, id: "address", placeholder: "Enter Address",class: "input_user6" ,:required => true  %><br> 
+        <span class="address">Address<span  class="required_symbol">*</span></span>
+        <%= form.text_area "subscription[address]", id: "address", placeholder: "Enter Address",class: "input_user6" ,:required => true  %><br> 
     </div>
      <div>
         <span class="menu_preference">Any menu preference</span>
-        <span class="input_user7"><%= form.select :menu_preference, id: ":menuPreference", placeholder: "Select Menu", class: "input_user7" , :required => true %></span>
+        <select name="subscription[menu_preference]" class="input_user7" id="menu_preference">
+            <option value="all">All</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+        </select>
     </div>
      <div class="form_check_box">
-        <%= form.check_box :veg , id: ":veg", class: "input_user8" , :required => true %> <span class="check_box" >Vegeterian</span>
-        <%= form.check_box :non_veg , id: ":non_veg", class: "input_user9" , :required => true %> <span class="check_box" >Non-Vegeterian</span>
+        <input type="radio" name="subscription[category]" id="veg" class="input_user8" value="veg"><span class="check_box" >Vegeterian</span>
+        <input type="radio" name="subscription[category]" id="non_veg" class="input_user9" value="non-veg"> <span class="check_box" >Non-Vegeterian</span>
+
     </div>
     <div>
         <span class="subscription_type">Subscription Type</span>
-        <%= form.select :subscription_type , id: "subscription_type", class: "input_user10" , :required => true %> 
+        <select name="subscription[subscription_type]" id="subscription_type" class="input_user10" required>
+            <option value="monthly">Monthly</option>
+            <option value="weekly">Weekly</option>
+        </select>
+
     </div>
     <div>
         <span class="price_expectation">Price Expectations</span>
-        <%= form.number_field :price_expectations, id: "price_expectations", class: "input_user11" , :required => true %>
+        <%= form.number_field "subscription[price_expectations]", id: "price_expectations", class: "input_user11" , :required => true %><button class="inr">INR</button>
     </div>
     <%= form.submit "Submit", class:"signupbttn"%>
     <% end %>

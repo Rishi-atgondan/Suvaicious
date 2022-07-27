@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post "/create", to: "users#create"
   post "/login", to: "sessions#create"
   get "subscription" , to: "suvaicious#subscription"
+  post '/subscription', to: 'suvaicious#sub_create'
   resources :users
   resources :sessions, only: [:login, :create, :destroy]
 
