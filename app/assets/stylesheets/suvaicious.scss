@@ -7,26 +7,26 @@
    scroll-behavior: smooth;
 }
 
-.nav_bar {
+#nav_bar {
      margin-left: 63%;
      font-size: 20px;
      list-style: none;
      display: flex;
  }
 
- .nav_bar li{
+ #nav_bar li{
      margin-left: 5%;
      text-decoration: none;
      font-weight: 400;
      color: black;
  }
 
- .nav_bar li a{
+ #nav_bar li a{
      text-decoration: none;
      color: black;
  }
 
- .nav_bar li a:hover{
+ #nav_bar li a:hover{
      color: #EC652B;
  }
 
@@ -378,9 +378,9 @@
 
 .seller_whole_div{
      margin-top: 500px;
+     position: absolute;
+     height: 1000px;
 }
-
-
 
 #seller_heading{
      text-align: center;
@@ -430,7 +430,6 @@
      border-radius: 5px;
      margin-top: 50px;
      margin-left: 900px;
-
 }
 
 .seller_point_2{
@@ -439,7 +438,7 @@
 }
 
 .seller_image2{
-     margin-left: 170px;
+     margin-left: 165px;
      margin-top: -270px;
      position: absolute;
 }
@@ -461,7 +460,7 @@
 }
 
 .seller_image3{
-     margin-left: 170px;
+     margin-left: 165px;
      margin-top: -210px;
      position: absolute;
 }
@@ -470,4 +469,308 @@
      margin-top: -510px;
      margin-left: -660px;
      position: absolute;
+}
+
+.sellers_testimonial{
+     margin-left: 130px;
+     font-size: 50px;
+     margin-top: -30px;
+}
+
+#seller_testimonial1{
+     background-color: white;
+     height: 300px;
+     width: 1000px;
+     margin-top: 50px;
+     margin-left: 280px;
+     border-radius: 10px;
+     box-shadow: #919191 0px 0px 5px 0px;
+     position: absolute;
+}
+
+.seller_testimonial_1{
+     height: 260px;
+     width: 250px;
+     margin-left: -470px;
+     margin-top: 20px;
+     position: absolute;
+     border-radius: 10px;
+}
+
+.seller_name_1{
+  font-size: 25px;
+  position: absolute;
+  margin-left: 300px;
+}
+
+.shop_name_1{
+     position: absolute;
+     font-size: 15px;
+     margin-left: 300px;
+     color: #EC652B;
+}
+
+.about_seller_1{
+     position: absolute;
+     font-size: 15px;
+     margin-top: 60px;
+     margin-left: 300px;
+}
+
+
+#seller_testimonial2{
+     background-color: white;
+     height: 300px;
+     width: 1000px;
+     margin-top: 50px;
+     margin-left: 280px;
+     border-radius: 10px;
+     box-shadow: #919191 0px 0px 5px 0px;
+     position: absolute;
+}
+
+.seller_testimonial_2{
+     height: 260px;
+     width: 250px;
+     margin-left: -470px;
+     margin-top: 20px;
+     position: absolute;
+     border-radius: 10px;
+}
+
+.seller_name_2{
+  font-size: 25px;
+  position: absolute;
+  margin-left: 300px;
+}
+
+.shop_name_2{
+     position: absolute;
+     font-size: 15px;
+     margin-left: 300px;
+     color: #EC652B;
+}
+
+.about_seller_2{
+     position: absolute;
+     font-size: 15px;
+     margin-top: 60px;
+     margin-left: 300px;
+}
+
+#seller_testimonial3{
+     background-color: white;
+     height: 300px;
+     width: 1000px;
+     margin-top: 50px;
+     margin-left: 280px;
+     border-radius: 10px;
+     box-shadow: #919191 0px 0px 5px 0px;
+     position: absolute;
+}
+
+.seller_testimonial_3{
+     height: 260px;
+     width: 250px;
+     margin-left: -470px;
+     margin-top: 20px;
+     position: absolute;
+     border-radius: 10px;
+}
+
+.seller_name_3{
+  font-size: 25px;
+  position: absolute;
+  margin-left: 300px;
+}
+
+.shop_name_3{
+     position: absolute;
+     font-size: 15px;
+     margin-left: 300px;
+     color: #EC652B;
+}
+
+.about_seller_3{
+     position: absolute;
+     font-size: 15px;
+     margin-top: 60px;
+     margin-left: 300px;
+}
+
+.slider_button_div2{
+     margin-left: 700px;
+     margin-top: 520px;
+     display: flex;
+}
+
+#slider_bttn1{
+     height:25px;
+     width: 25px;
+     border-radius: 100px;
+     border: none;
+     margin-left: 15px;
+     cursor: pointer;
+     margin-top: -100px;
+}
+
+#slider_bttn1:hover{
+  background-color: #EC652B;
+}
+
+#slider_bttn2{
+     height:25px;
+     width: 25px;
+     border-radius: 100px;
+     border: none;
+     margin-left: 15px;
+     cursor: pointer;
+     margin-top: -100px;
+}
+
+#slider_bttn2:hover{
+  background-color: #EC652B;
+}
+
+#slider_bttn3{
+     height:25px;
+     width: 25px;
+     border-radius: 100px;
+     border: none;
+     margin-left: 15px;
+     cursor: pointer;
+     margin-top: -100px;
+}
+
+#slider_bttn3:hover{
+  background-color: #EC652B;
+}
+
+.background_map{
+     width: 100%;
+}
+
+.map_1{
+     margin-top: -15px;
+     width: 100%;
+}
+
+.map_2{
+     width: 100%;
+     margin-top: -10px;
+}
+
+.footer{
+    background-color: #ffdfbf;
+     height: 200px;
+     margin-left: -8px;
+     width: 100%;
+}
+
+.footer_logo{
+     height: 80px;
+     width: 140px;
+     margin-top: 10px;
+     margin-left: 300px;
+}
+
+.apos{
+     color:#EC652B;
+     font-size: 15px;
+}
+
+.footer_about{
+     font-size: 10px;
+     margin-left: 320px;
+     margin-top: -8px;
+    color: black;
+}
+
+.app_suvaicious{
+     margin-top: -130px;
+     position: absolute;
+     margin-left: 530px;
+     text-decoration: underline;
+}
+
+.suvaicious_cons{
+     margin-top: -100px;
+     margin-left: 535px;
+     color: black;
+}
+
+.suvaicious_cons :hover{
+     color: #EC652B;
+}
+
+.link_suv{
+     text-decoration: none;
+     font-size: 13px;
+     color: black;
+}
+
+.get_in_touch{
+     margin-top: -130px;
+     position: absolute;
+     margin-left: 750px;
+     text-decoration: underline;
+}
+
+.information{
+     margin-top: -100px;
+     position: absolute;
+     margin-left: 750px;
+}
+
+#info :hover{
+     color: #EC652B;
+}
+
+#info{
+     text-decoration: none;
+     font-size: 13px;
+}
+
+#link{
+     text-decoration: none;
+     color: black;
+}
+
+.follow{
+     margin-top: -130px;
+     position: absolute;
+     margin-left: 1000px;
+}
+
+.social_media{
+     margin-top: -100px;
+     position: absolute;
+     margin-left: 1000px;
+}
+
+.app{
+     height: 40px;
+     width: 40px;
+     display: inline-flex;
+     cursor: pointer;
+}
+
+.up_arrow_bttn{
+     float: right;
+     margin-right: 200px;
+     margin-top: -100px;
+     height: 45px;
+     width: 45px;
+     font-size: 30px;
+     padding-top: -20px;
+     border-radius: 5px;
+     background-color: white;
+     cursor: pointer;
+     border: none;
+     box-shadow: #EC652B 0px 0px 10px 0px;
+}
+
+.up_arrow_bttn:hover{
+     color: black;
+     background-color: #EC652B;
 }

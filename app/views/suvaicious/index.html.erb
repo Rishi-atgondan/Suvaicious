@@ -6,7 +6,7 @@
   }
 </style>
 
-<ul class="nav_bar">
+<ul id="nav_bar">
   <li><a href="home">Home</a></li>
   <li><a href="#">Kitchen</a></li>
   <li><a href="#buyer_heading">Buyer</a></li>
@@ -184,4 +184,83 @@ function get3() {
                     <%=image_tag 'seller_3.png' ,alt:'logo', class:'seller_image3'%> 
                   </div>
                       <div><iframe class="seller_video" src="https://www.youtube.com/embed/pZFAw7Q3Zyk" title="YouTube video player" width="600" height="370" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                       <div class="sellers_testimonial"><span>Sellers Testimonial</span></div>
+   <div id="seller_testimonial1">
+       <%=image_tag "seller_testimonial1" ,alt:"seller_testimonial1", class:"seller_testimonial_1" %><p class="seller_name_1" >Pooja Hegde<p>
+       <p class="shop_name_1">Chef at App Suvaicious - Dial and Eat</p>
+       <p class="about_seller_1">"Hi I am Pooja hedge, I am passionate about cooking, my entire family members love my cooking, my son suggested me why don't you cook and sell in online, most of the bachelors can't get the quality and home made food, at that time we found " App Suvaicious" it was interesting and we registered in it where I can prepare homemade food with love and passion, to all age people, I feel happy that all people are eating healthy and mom's food from the App Suvaicious.Great work keep it up!"</p>
+   </div>
+
+      <div id="seller_testimonial2">
+       <%=image_tag "seller_testimonial2" ,alt:"seller_testimonial2", class:"seller_testimonial_2" %><p class="seller_name_2" >Pranitha Subhash<p>
+       <p class="shop_name_2">Chef at App Suvaicious - Verdure</p>
+       <p class="about_seller_2">"Hi, this is Jacintha, came across App Suvaicious on Facebook. A beautiful platform for homemakers to earn through their passion. Easy to register, no upfront fee of any kind. I would recommend this to homemakers, good at cooking, to join and share their dishes with people who are really in need of good home food. A very good opportunity for home makers to showcase their cooking skills and also make an earning through their passion. Polite, Respectful, and friendly team.Thank you for this wonderful opportunity you provide to make my passion into a profitable and appreciable business."</p>
+   </div>
+
+    <div id="seller_testimonial3">
+       <%=image_tag "seller_testimonial3" ,alt:"seller_testimonial3", class:"seller_testimonial_3" %><p class="seller_name_3" >Rashmika Mandanna<p>
+       <p class="shop_name_3">Chef at App Suvaicious - Rashii</p>
+       <p class="about_seller_3">"Hi I am Rashmika, I am passionate about cooking, my entire family members love my cooking, my son suggested me why don't you cook and sell in online, most of the bachelors can't get the quality and home made food, at that time we found " App Suvaicious" it was interesting and we registered in it where I can prepare homemade food with love and passion, to all age people, I feel happy that all people are eating healthy and mom's food from the App Suvaicious.Great work keep it up!"</p>
+   </div>
+
+   <div class="slider_button_div2">
+    <button onclick="show1('first_grid')" id="slider_bttn1"></button>
+    <button onclick="show2('second_grid')" id="slider_bttn2"></button>
+    <button onclick="show3('third_grid')" id="slider_bttn3"></button>
+</div>
+
+<script>
+function show1(){
+   document.getElementById("seller_testimonial1").style.display = "block";
+   document.getElementById("seller_testimonial2").style.display = "none";
+   document.getElementById("seller_testimonial3").style.display = "none";
+}
+
+function show2(){
+   document.getElementById("seller_testimonial1").style.display = "none";
+   document.getElementById("seller_testimonial2").style.display = "block";
+   document.getElementById("seller_testimonial3").style.display = "none";
+}
+
+function show3(){
+   document.getElementById("seller_testimonial1").style.display = "none";
+   document.getElementById("seller_testimonial2").style.display = "none";
+   document.getElementById("seller_testimonial3").style.display = "block";
+}
+
+</script>
+
+</div>
+
+<div class="app_map">
+       <%=image_tag "background_map" ,alt:"background_map", class:"background_map" %>
+       <%=image_tag "map_1" ,alt:"map_1", class:"map_1" %>
+       <%=image_tag "map_2" ,alt:"map_2", class:"map_2" %>
+</div>
+
+<div class="footer">
+       <%=image_tag "logo" ,alt:"logo", class:"footer_logo" %>
+       <p class="footer_about"><span class=apos>"</span> Creating a healthy India by <br> serving home food and <br> Empower woman to earn from <br> their own kitchen.<span class=apos>"</span></p>
+      <span class="app_suvaicious" >APP Suvaicious</span>
+      <div  class="suvaicious_cons" >
+          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOODT&C.pdf" target="_blank" >Terms & conditions</a><br>
+          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_Privacy%20Policy.pdf" target="_blank" >Privacy policy</a><br>
+          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_Cancellation%20and%20Refund%20Policy.pdf" target="_blank" >Refund & cancellation</a><br>
+          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_FAQ.pdf" target="_blank" >FAQ</a>
+      </div>
+      <span class="get_in_touch" >Get In Touch</span>
+      <div class="information">
+            <span id="info" ><a id="link" href="mailto:suvaiciousapp@gmail.com">rishijeeva13@gmail.com</a></span><br>
+            <span id="info" ><a id="link" href="callto:+91 6381950080">+91 6381950080</a></span>
+      </div>
+      <span class="follow">Follow us on</span>
+<div class="social_media">
+       <%=image_tag "fb" ,alt:"fb", class:"app" %>
+       <%=image_tag "wa" ,alt:"wa", class:"app" %>
+       <%=image_tag "insta" ,alt:"insta", class:"app" %><br>
+       <%=image_tag "twitter" ,alt:"twitter", class:"app" %>
+       <%=image_tag "linkedin" ,alt:"linkedin", class:"app" %>
+       <%=image_tag "youtube" ,alt:"youtube", class:"app" %>
+</div>
+  <a href="#nav_bar"><button class="up_arrow_bttn">🠕</button></a>
 </div>
