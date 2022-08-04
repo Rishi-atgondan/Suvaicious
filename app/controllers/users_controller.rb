@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
+  skip_before_action:ensure_user_logged_in
   def register
     @user = User.new
   end
@@ -7,9 +8,9 @@ class UsersController < ApplicationController
 
     user = User.new(register_params)
     if user.save
-      session[:user_id] = user.id
+      session[:current_user_id] = user.id
       flash[:notice]= "User Successfully Created!"
-      redirect_to '/login'
+      redirect_to "/home"
     else
       flash[:alert] = "Password doesn't Match"
       render 'register'

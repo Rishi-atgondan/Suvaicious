@@ -12,9 +12,23 @@
   <li><a href="#buyer_heading">Buyer</a></li>
   <li><a href="#seller_heading">Seller</a></li>
   <li><a href="about_us">About us</a></li>
+  <%if @presence== 0%>
+  <li><a href="/login"><%=image_tag 'login.png' ,alt:'logo', class: 'nav_login_img' %></a> 
+  <% else %>
+   <li><a href="#" onclick="showDiv()"><%=image_tag 'login.png' ,alt:'logo', class: 'nav_login_img' %></a> 
+  <%end%>                     
 </ul>
 
+<%if @presence==1%>
+<div id="showDiv">
+   <%= @user.firstname%>
+   <%= link_to destroy_session_path, method: :delete do %>
+  <i class="bx bx-log-out"></i>Log out
+  <% end %>
+
+
 <div>
+<% end %>
   <%=image_tag 'logo.png' ,alt:'logo', class: 'logo' %>
 </div>
 
@@ -27,7 +41,7 @@
 <div>
 
 <div>
-   <a href="login" ><button class="login">Login</button></a>
+   <%if @presence==0 %><a href="login" ><button class="login">Login</button></a><% end %>
    <a href="add_kitchen"><button class="restaurant_button">Add Kitchen</button></a>
 </div>
 

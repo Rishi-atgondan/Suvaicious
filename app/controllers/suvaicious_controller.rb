@@ -1,5 +1,21 @@
 class SuvaiciousController < ApplicationController
   skip_before_action :verify_authenticity_token
+  skip_before_action :ensure_user_logged_in
+  def index
+    @presence = 0
+    if current_user
+      @presence = 1
+      @user = User.find(current_user.id)
+      puts @presence
+      render "suvaicious/index"  
+    else
+      @presence = 0
+      puts @presence
+      render "suvaicious/index"
+    end
+
+
+  end
   def subscription
     @subp= Subscription.new
   end

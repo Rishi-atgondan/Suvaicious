@@ -8,7 +8,7 @@
 }
 
 #nav_bar {
-     margin-left: 63%;
+     margin-left: 60%;
      font-size: 20px;
      list-style: none;
      display: flex;
@@ -30,6 +30,13 @@
      color: #EC652B;
  }
 
+ .nav_login_img{
+     height:35px;
+     width: 35px;
+     position: absolute;
+     margin-left: -5px;
+     margin-top: -4px;
+ }
 
 .logo{
      margin-left: 745px;
