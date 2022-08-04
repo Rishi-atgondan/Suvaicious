@@ -17,7 +17,8 @@
              <%= form.password_field :password, id: "pass", placeholder: "Password",class: "input_user" ,:required => true  %><br>
              <i class="far fa-eye" id="togglePassword"></i>
              <a class="forget_pass" href="#!">Forgot password?</a>
-             <%= form.submit "Sign In", class:"loginBtn" %>
+             <p style="color: red; font-size: 10px; "  ><%= flash[:alert] %></p>
+             <%= form.submit "Sign In", class:"signinBtn" %>
              <% end %>
              <span class="text_qs">Dont have an account? <a onclick="show_register()"  href="register"><span id="register">Register</span></a></span>
           </div>

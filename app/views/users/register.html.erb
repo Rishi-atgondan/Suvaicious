@@ -12,13 +12,14 @@
          <div><a href="login"><%=image_tag 'left-arrow.png',alt:'left_arrow', id: 'left_arrow' %></a></div> 
             <span class="form_heading_sign_up">Sign Up</span>
                 <div class="login_form_sign_up">  
-                    <%= form_with(model: @user, url: "/create", method: "POST") do |form| %>
-                    <%= form.email_field :email, id: "email", placeholder: "Email id",class: "input_user" ,:required => true  %><br>             
-                    <%= form.text_field :firstname, id: "firstname", placeholder: "First Name",class: "input_user" ,:required => true  %><br> 
-                    <%= form.text_field :lastname, id: "lastname", placeholder: "Last Name",class: "input_user" ,:required => true  %><br> 
-                    <%= form.telephone_field :ph_number, id: "ph_number", placeholder: "Ph no",class: "input_user" ,:required => true  %><br> 
-                    <%= form.password_field :password, id: "password", placeholder: "Create Password",class: "input_user" ,:required => true  %><br>
-                    <%= form.password_field :confirm_password, id: "confirm_password", placeholder: "Confirm Password",class: "input_user" ,:required => true  %><br> 
+                    <%= form_with( url: "/create", method: "POST") do |form| %>
+                    <%= form.email_field "user[email]", id: "email", placeholder: "Email id",class: "input_user" ,:required => true  %><br>             
+                    <%= form.text_field "user[firstname]", id: "firstname", placeholder: "First Name",class: "input_user" ,:required => true  %><br> 
+                    <%= form.text_field "user[lastname]", id: "lastname", placeholder: "Last Name",class: "input_user" ,:required => true  %><br> 
+                    <%= form.telephone_field "user[ph_number", id: "ph_number", placeholder: "Ph no",class: "input_user" ,:required => true  %><br> 
+                    <%= form.password_field "user[password]", id: "password", placeholder: "Create Password",class: "input_user" ,:required => true  %><br>
+                    <%= form.password_field "user[password_confirmation]", id: "confirm_password", placeholder: "Confirm Password",class: "input_user" ,:required => true  %><br>
+                    <p style="color: red; font-size: 10px; "  ><%= flash[:alert] %></p><br> 
                     <%= form.submit "Submit", class:"signUpBtn" %>   
                     <% end %>
 </div>

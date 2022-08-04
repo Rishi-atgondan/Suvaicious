@@ -11,10 +11,10 @@ class SessionsController < ApplicationController
       if user && user.authenticate(params[:password])
          session[:user_id] = user.id
          flash.now[:notice] = "Logged in successfully"
-        render plain: "success"
+         redirect_to '/home'
        else
-         flash.now[:alert] = "Email or password is invalid"
-         render plain: "fail"
+         flash[:alert] = "Email or password is invalid"
+         redirect_to '/login'
        end
     
       end

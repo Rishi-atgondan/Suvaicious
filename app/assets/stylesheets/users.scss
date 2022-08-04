@@ -16,7 +16,7 @@
 .signUpBtn{
     height: 40px;
     width: 100px;
-    margin-top: 20px;
+    margin-top: -10px;
     margin-left: 140px;
     background-color:#0d6cfd;
     color: white;
@@ -24,6 +24,8 @@
     border: none;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+    position: absolute;
 }
 
 #left_arrow{

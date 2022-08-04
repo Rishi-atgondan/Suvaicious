@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  get 'kitchens/add_kitchen'
   get 'sessions/login'
   get 'users/new'
   get "home", to: "suvaicious#index"
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "subscription" , to: "suvaicious#subscription"
   post '/subscription', to: 'suvaicious#sub_create'
+  get 'add_kitchen' , to: "kitchens#add_kitchen"
+  get 'add_kitchen_form' , to:"kitchens#add_kitchen_form"
   resources :users
   resources :sessions, only: [:login, :create, :destroy]
 
