@@ -5,27 +5,38 @@
     background-size: 100%;
   }
 </style>
-
+<% cur_user = session[:current_user_id] %>
 <ul id="nav_bar">
   <li><a href="home">Home</a></li>
   <li><a href="#">Kitchen</a></li>
   <li><a href="#buyer_heading">Buyer</a></li>
   <li><a href="#seller_heading">Seller</a></li>
   <li><a href="about_us">About us</a></li>
-  <%if @presence== 0%>
-  <li><a href="/login"><%=image_tag 'login.png' ,alt:'logo', class: 'nav_login_img' %></a> 
+  <%if cur_user.nil? %>
+   
   <% else %>
-   <li><a href="#" onclick="showDiv()"><%=image_tag 'login.png' ,alt:'logo', class: 'nav_login_img' %></a> 
+  <li><a  onclick="showDiv()"><%=image_tag 'avatar.png' ,alt:'logo', class: 'nav_login_img',id: 'toggle_btn' %></a></li> 
   <%end%>                     
 </ul>
 
 <%if @presence==1%>
 <div id="showDiv">
-   <%= @user.firstname%>
-   <%= link_to destroy_session_path, method: :delete do %>
-  <i class="bx bx-log-out"></i>Log out
+<div class="dropbtn" id="dropbtn_toggle">
+   <div class="dropbtn_content signed_in">Signed in As</div>
+   <div class="dropbtn_content first_name"><i class="fa fa-user"></i><%= @user.firstname%></div>
+   <div class="dropbtn_content log_out"><%= link_to destroy_session_path, method: :delete do %>
+      <i class="fa fa-sign-out"></i>Log out</div>
+</div>
   <% end %>
+</div>
 
+<script>
+   var x = document.getElementById("dropbtn");
+   function showDiv(){
+      let element =document.getElementById("dropbtn_toggle");
+      element.classList.toggle("dropbtn");
+   }
+</script>
 
 <div>
 <% end %>
@@ -38,11 +49,11 @@
     <p class="phrase"><span class="quotation">"</span>We take care of all your nutrition worries to ensure that you have your
        tummies filled with healthy, scrumptious and homely food.<span class="quotation">"</span>
     </p>
+    <a href="add_kitchen"><button class="restaurant_button">Add Kitchen</button></a>
 <div>
 
 <div>
-   <%if @presence==0 %><a href="login" ><button class="login">Login</button></a><% end %>
-   <a href="add_kitchen"><button class="restaurant_button">Add Kitchen</button></a>
+   <% if cur_user.nil? %><a href="login" ><button class="login">Login</button></a><% end %>
 </div>
 
 <div id="buyer_heading">
