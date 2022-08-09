@@ -1,1 +1,101 @@
-jdkwedlk2m3
+<!DOCTYPE html>
+
+<style>
+ body{
+     font-family:'Inter-Regular';
+ }
+</style>
+
+<div class="nav_div_fo">
+<%=image_tag 'logo.png' ,alt:'buyer_logo', class:'nav_logo' %>
+<span class="bussiness">for Bussiness</span>
+<hr class="hr_line">
+</div>
+
+
+<div id="whole_div_kitchenForm">
+      <span class="kitchenForm_heading"> Create your restaurant page</span>
+      <hr class="underline_form">
+        <div> 
+            <%=image_tag 'one.jpg' ,alt:'one', class: 'one' %>
+            <button class="kitchenType_bttn">Kitchen Information <br> <span class="one_info" >Kitchen name, address, contact no., owner details</span></button>
+        </div>
+        <div> 
+            <%=image_tag 'two.jpg' ,alt:'two', class: 'two' %>
+            <button class="kitchenType_bttn2">Kitchen Type & Timings <br> <span class="two_info" >Establishment & opening hours</span></button>
+        </div>
+          <div> 
+            <%=image_tag 'three.jpg' ,alt:'three', class: 'three' %>
+            <button class="kitchenType_bttn3">Upload Images<br><span class="three_info" >Menu, Kitchen, food images</span></button>
+        </div>
+</div>
+
+
+    
+<div id= "whole_kitchen_form">
+
+<div id="Kitchen_info_div">
+        <span class="kitchen_info_div_heading" >Kitchen Information</span><br>
+        <span class="kitchen_details">Kitchen details<span><br>
+        <span class="kitchen_sub_details">Name, address and location</span>
+        <%= form_with(url: "/add_kitchen_form", method: "POST") do |form|%>
+        <input type="text" placeholder="kitchen name" id="kitchen_name" required><br>
+        <input type="text" placeholder="kitchen complete address" id="kitchen_address" required><br><br>
+        <span class="map_heading">Please place the cursor accurately at your kitchen location on the map</span><br>
+        <span class="map_sub_heading">This will help you to find your kitchen address</span> <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.024363409294!2d80.2404200147403!3d12.970292790856771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d6d804e0793%3A0xf310a6ebd244b2d0!2sGlobal%20Infocity%20Park%2C%20Ambedkar%20Nagar%2C%20Perungudi%2C%20Chennai%2C%20Tamil%20Nadu%20600096!5e0!3m2!1sen!2sin!4v1659933408710!5m2!1sen!2sin" width="650" height="300" border-radius="5px" margin-top="10px" position="absolute" style="border:0; margin-top: 20px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>        
+        <span class="detect">To detect the latitude and longitude</span> <%=image_tag 'gps.jpg' ,alt:'gps', class: 'gps'%> <button id="detect_bttn" onclick="getLocation()" >Detect</button><br>
+        <input id="latitude" type="float" placeholder="Latitude" required> <input id="longitude"  type="float" placeholder="Longitude"><br>
+        <span class="sub_address">Kitchen address details</span>
+        <input class="nation" type="text" placeholder="Nation" required> <input class="pincode" type="number" placeholder="Pin-code"><br>
+        <input class="state" type="text" placeholder="State" required> <input class="city" type="text" placeholder="City"><br>
+        <span class="contact_kitchen" >Contact number at Kitchen</span><br>
+        <span class="contact_sub">Your customers will call on this number for general enquiries</span><br>
+        <input class="ph_number" type="tel" placeholder="Phone Number" required><br>
+        <span class="kitchen_owner_contact">Kitchen owner details</span><br>
+        <span class="contact_owner_sub">These will be used to share revenue related communications</span><br>
+        <input class="kitchen_ph_number" type="tel" placeholder="Phone Number" required><br>
+        <input class="owner_name" type="text" placeholder="Owner Name" required> <input class="owner_mail"  type="email" placeholder="Owner Mail id"><br>
+</div>
+
+<div class="kitchen_type_timings">
+</div>
+
+
+
+<%end%>
+</div>
+<div class="footer_form">
+<button onclick="back()" class="back_bttn">Back</button><button onclick="next()"  class="next_bttn" >Next</button>
+</div>
+
+<script>
+function next(){
+    document.getElementById("kitchen_info_div").style.display = "none";
+    document.getElementById("kitchen_type_timings").style.display = "block";
+}
+
+</script>
+
+
+
+
+
+<script>
+    let la = document.getElementById('latitude');
+    let lo = document.getElementById('longitude');
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+        la.value = position.coords.latitude;
+        lo.value = position.coords.longitude;
+    }
+    </script>
+
+    

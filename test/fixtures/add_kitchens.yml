@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Kitchen_name: MyString
+  kitchen_address: MyString
+  latitude: MyString
+  longitude: MyString
+  nation: MyString
+  state: MyString
+  pincode: 1
+  city: MyString
+  kitchen_ph_no: 
+  kitchen_owner_no: 
+  kitchen_owner_name: MyString
+  kitchen_owner_mailID: MyString
+  establishment_type: MyString
+  types_of_cuisines: MyString
+  kitchen_open_time: 1.5
+  kitchen_close_time: 1.5
+  kitchen_open_days: MyString
+  kitchen_images: 
+  food_images: 
+
+two:
+  Kitchen_name: MyString
+  kitchen_address: MyString
+  latitude: MyString
+  longitude: MyString
+  nation: MyString
+  state: MyString
+  pincode: 1
+  city: MyString
+  kitchen_ph_no: 
+  kitchen_owner_no: 
+  kitchen_owner_name: MyString
+  kitchen_owner_mailID: MyString
+  establishment_type: MyString
+  types_of_cuisines: MyString
+  kitchen_open_time: 1.5
+  kitchen_close_time: 1.5
+  kitchen_open_days: MyString
+  kitchen_images: 
+  food_images: 
