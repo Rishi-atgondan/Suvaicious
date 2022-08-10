@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAddKitchens < ActiveRecord::Migration[6.1]
   def change
     create_table :add_kitchens do |t|
