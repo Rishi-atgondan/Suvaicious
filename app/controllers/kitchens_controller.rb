@@ -3,16 +3,17 @@ class KitchensController < ApplicationController
   def add_kitchen
   end
   def create
-    kitchen = Kitchen.new(kitchen_params)
-    if kitchen.save
+    add_kitchen = AddKitchen.new(kitchen_params)
+    if add_kitchen.save
       render plain: true
     else
       render plain: false    
     end
   end
+  
   private
   def kitchen_params
-    params.require(:kitchen).permit(
+    params.require(:add_kitchen).permit(
        :Kitchen_name , 
        :kitchen_address , 
        :latitude ,
@@ -21,6 +22,7 @@ class KitchensController < ApplicationController
        :state ,
        :pincode ,
        :city , 
+       :establishment_type,
        :kitchen_ph_no ,
        :kitchen_owner_no ,
        :kitchen_owner_name ,
@@ -30,8 +32,7 @@ class KitchensController < ApplicationController
        :kitchen_open_time ,
        :kitchen_close_time ,
        :kitchen_open_days ,
-       :kitchen_images ,
-       :food_images)
-    
+       :kitchen_images => [] ,
+       :food_images => [])
   end
 end

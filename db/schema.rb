@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_08_114338) do
+ActiveRecord::Schema.define(version: 2022_08_10_052204) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 2022_08_08_114338) do
     t.string "kitchen_owner_mailID"
     t.string "establishment_type"
     t.string "types_of_cuisines"
-    t.float "kitchen_open_time"
-    t.float "kitchen_close_time"
+    t.string "kitchen_open_time"
+    t.string "kitchen_close_time"
     t.string "kitchen_open_days"
     t.binary "kitchen_images"
     t.binary "food_images"

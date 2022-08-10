@@ -18,69 +18,198 @@
       <hr class="underline_form">
         <div> 
             <%=image_tag 'one.jpg' ,alt:'one', class: 'one' %>
-            <button class="kitchenType_bttn">Kitchen Information <br> <span class="one_info" >Kitchen name, address, contact no., owner details</span></button>
+            <a href="#kitchen_info_div" ><button class="kitchenType_bttn">Kitchen Information <br> <span class="one_info" >Kitchen name, address, contact no., owner details</span></button></a>
         </div>
         <div> 
             <%=image_tag 'two.jpg' ,alt:'two', class: 'two' %>
-            <button class="kitchenType_bttn2">Kitchen Type & Timings <br> <span class="two_info" >Establishment & opening hours</span></button>
+            <a href="#kitchen_type_timings" ><button  class="kitchenType_bttn2">Kitchen Type & Timings <br> <span class="two_info" >Establishment & opening hours</span></button></a>
         </div>
           <div> 
             <%=image_tag 'three.jpg' ,alt:'three', class: 'three' %>
-            <button class="kitchenType_bttn3">Upload Images<br><span class="three_info" >Menu, Kitchen, food images</span></button>
+            <a  href="#kitchen_upload_images" ><button class="kitchenType_bttn3">Upload Images<br><span class="three_info" >Menu, Kitchen, food images</span></button></a>
         </div>
 </div>
 
 
-    
 <div id= "whole_kitchen_form">
-
-<div id="Kitchen_info_div">
-        <span class="kitchen_info_div_heading" >Kitchen Information</span><br>
-        <span class="kitchen_details">Kitchen details<span><br>
-        <span class="kitchen_sub_details">Name, address and location</span>
-        <%= form_with(url: "/add_kitchen_form", method: "POST") do |form|%>
-        <input type="text" placeholder="kitchen name" id="kitchen_name" required><br>
-        <input type="text" placeholder="kitchen complete address" id="kitchen_address" required><br><br>
+  
+  <div id="Kitchen_info_div">
+    <span class="kitchen_info_div_heading" >Kitchen Information</span><br>
+    <span class="kitchen_details">Kitchen details<span><br>
+      <span class="kitchen_sub_details">Name, address and location</span>
+      
+      <form action="/add_kitchen" method="post">
+        <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+        <input type="text" placeholder="kitchen name" id="kitchen_name" required name="add_kitchen[Kitchen_name]"><br>
+        <input type="text" placeholder="kitchen complete address" id="kitchen_address" required name="add_kitchen[kitchen_address]"><br><br>
         <span class="map_heading">Please place the cursor accurately at your kitchen location on the map</span><br>
         <span class="map_sub_heading">This will help you to find your kitchen address</span> <br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.024363409294!2d80.2404200147403!3d12.970292790856771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d6d804e0793%3A0xf310a6ebd244b2d0!2sGlobal%20Infocity%20Park%2C%20Ambedkar%20Nagar%2C%20Perungudi%2C%20Chennai%2C%20Tamil%20Nadu%20600096!5e0!3m2!1sen!2sin!4v1659933408710!5m2!1sen!2sin" width="650" height="300" border-radius="5px" margin-top="10px" position="absolute" style="border:0; margin-top: 20px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>        
         <span class="detect">To detect the latitude and longitude</span> <%=image_tag 'gps.jpg' ,alt:'gps', class: 'gps'%> <button id="detect_bttn" onclick="getLocation()" >Detect</button><br>
-        <input id="latitude" type="float" placeholder="Latitude" required> <input id="longitude"  type="float" placeholder="Longitude"><br>
+        <input id="latitude" type="float" placeholder="Latitude" required name="add_kitchen[latitude]"> <input id="longitude"  type="float" placeholder="Longitude" name="add_kitchen[longitude]"><br>
         <span class="sub_address">Kitchen address details</span>
-        <input class="nation" type="text" placeholder="Nation" required> <input class="pincode" type="number" placeholder="Pin-code"><br>
-        <input class="state" type="text" placeholder="State" required> <input class="city" type="text" placeholder="City"><br>
+        <input class="nation" type="text" placeholder="Nation" required name="add_kitchen[nation]"> <input class="pincode" type="tel" pattern="[0-9]+" minlength="6" maxlength="6"  placeholder="Pin-code" name="add_kitchen[pincode]"><br>
+        <input class="state" type="text" placeholder="State" required name="add_kitchen[state]"> <input class="city" type="text" placeholder="City" name="add_kitchen[city]"><br>
         <span class="contact_kitchen" >Contact number at Kitchen</span><br>
         <span class="contact_sub">Your customers will call on this number for general enquiries</span><br>
-        <input class="ph_number" type="tel" placeholder="Phone Number" required><br>
+        <input class="ph_number" type="tel" minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Phone Number" required name="add_kitchen[kitchen_owner_no]"><br>
         <span class="kitchen_owner_contact">Kitchen owner details</span><br>
         <span class="contact_owner_sub">These will be used to share revenue related communications</span><br>
-        <input class="kitchen_ph_number" type="tel" placeholder="Phone Number" required><br>
-        <input class="owner_name" type="text" placeholder="Owner Name" required> <input class="owner_mail"  type="email" placeholder="Owner Mail id"><br>
+        <input class="kitchen_ph_number" type="tel" minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Phone Number" required name="add_kitchen[kitchen_ph_no]"><br>
+        <input class="owner_name" type="text" placeholder="Owner Name" required name="add_kitchen[kitchen_owner_name]"> <input class="owner_mail"  type="email" placeholder="Owner Mail id" name="add_kitchen[kitchen_owner_mailID]"><br>
 </div>
 
-<div class="kitchen_type_timings">
+<div id="kitchen_type_timings">
+       <span class="kitchen_type_div_heading">Kitchen Type & Timings</span><br>
+       <span class="establishment_type">Establishment type<span><br>
+       <input type="radio" class="radio_type" name="add_kitchen[establishment_type]" value="delivery_only" required><label for="radio">Delivery only</label>
+       <span class="delivery_only">Delivery only</span>
+       <br>
+       <span class="types_kitchens">Types Of Kitchens</span><br>
+       <span class="sub_types">Select options which best describe food your serve</span><br>
+       <select id="kitchen_drpdwn" name="add_kitchen[types_of_cuisines]">
+           <option value="Andhra">Andhra</option>
+           <option value="North-indian">North-Indian</option>
+           <option value="South-indian">South-indian</option>
+           <option value="Chettinad">Chettinad</option>
+       </select>
+       <span class="kitchen_timing" >Kitchen operational hours</span>
+       <span class="kitchen_sub_timing">Mark kitchen opening and closing hours</span>
+       <p class="open">Opens at</p> <p class="close">Closes at</p>
+       <select id="kitchen_time_drpdwn1" name="add_kitchen[kitchen_open_time]">
+        <option value="12:00 AM">12:00 AM</option>
+        <option value="12:30 AM">12:30 AM</option>
+        <option value="1:00 AM">1:00 AM</option>
+        <option value="1:30 AM">1:30 AM</option>
+        <option value="2:00 AM">2:00 AM</option>
+        <option value="2:30 AM">2:30 AM</option>
+        <option value="3:00 AM">3:00 AM</option>
+        <option value="3:30 AM">3:30 AM</option>
+        <option value="4:00 AM">4:00 AM</option> 
+        <option value="4:30 AM">4:30 AM</option>
+        <option value="5:00 AM">5:00 AM</option>
+        <option value="5:30 AM">5:30 AM</option>
+        <option value="6:00 AM">6:00 AM</option>
+        <option value="6:30 AM">6:30 AM</option>
+        <option value="7:00 AM">7:00 AM</option>
+        <option value="7:30 AM">7:30 AM</option>
+        <option value="8:00 AM">8:00 AM</option>
+        <option value="8:30 AM">8:30 AM</option>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="9:30 AM">9:30 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="10:30 AM">10:30 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="11:30 AM">11:30 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="12:30 PM">12:30 PM</option>
+        <option value="1:30 PM">1:30 PM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="2:30 PM">2:30 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
+        <option value="3:30 PM">3:30 PM</option>
+        <option value="4:00 PM">4:00 PM</option> 
+        <option value="4:30 PM">4:30 PM</option>
+        <option value="5:00 PM">5:00 PM</option>
+        <option value="5:30 PM">5:30 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+        <option value="6:30 PM">6:30 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+        <option value="7:30 PM">7:30 PM</option>
+        <option value="8:00 PM">8:00 PM</option>
+        <option value="8:30 PM">8:30 PM</option>
+        <option value="9:00 PM">9:00 PM</option>
+        <option value="9:30 PM">9:30 PM</option>
+        <option value="10:00 PM">10:00 PM</option>
+        <option value="10:30 PM">10:30 PM</option>
+        <option value="11:00 PM">11:00 PM</option>
+        <option value="11:30 PM">11:30 PM</option>
+    </select>
+    <select id="kitchen_time_drpdwn2" name="add_kitchen[kitchen_close_time]">
+      <option value="12:00 AM">12:00 AM</option>
+      <option value="12:30 AM">12:30 AM</option>
+      <option value="1:00 AM">1:00 AM</option>
+      <option value="1:30 AM">1:30 AM</option>
+      <option value="2:00 AM">2:00 AM</option>
+      <option value="2:30 AM">2:30 AM</option>
+      <option value="3:00 AM">3:00 AM</option>
+      <option value="3:30 AM">3:30 AM</option>
+      <option value="4:00 AM">4:00 AM</option> 
+      <option value="4:30 AM">4:30 AM</option>
+      <option value="5:00 AM">5:00 AM</option>
+      <option value="5:30 AM">5:30 AM</option>
+      <option value="6:00 AM">6:00 AM</option>
+      <option value="6:30 AM">6:30 AM</option>
+      <option value="7:00 AM">7:00 AM</option>
+      <option value="7:30 AM">7:30 AM</option>
+      <option value="8:00 AM">8:00 AM</option>
+      <option value="8:30 AM">8:30 AM</option>
+      <option value="9:00 AM">9:00 AM</option>
+      <option value="9:30 AM">9:30 AM</option>
+      <option value="10:00 AM">10:00 AM</option>
+      <option value="10:30 AM">10:30 AM</option>
+      <option value="11:00 AM">11:00 AM</option>
+      <option value="11:30 AM">11:30 AM</option>
+      <option value="12:00 PM">12:00 PM</option>
+      <option value="12:30 PM">12:30 PM</option>
+      <option value="1:30 PM">1:30 PM</option>
+      <option value="2:00 PM">2:00 PM</option>
+      <option value="2:30 PM">2:30 PM</option>
+      <option value="3:00 PM">3:00 PM</option>
+      <option value="3:30 PM">3:30 PM</option>
+      <option value="4:00 PM">4:00 PM</option> 
+      <option value="4:30 PM">4:30 PM</option>
+      <option value="5:00 PM">5:00 PM</option>
+      <option value="5:30 PM">5:30 PM</option>
+      <option value="6:00 PM">6:00 PM</option>
+      <option value="6:30 PM">6:30 PM</option>
+      <option value="7:00 PM">7:00 PM</option>
+      <option value="7:30 PM">7:30 PM</option>
+      <option value="8:00 PM">8:00 PM</option>
+      <option value="8:30 PM">8:30 PM</option>
+      <option value="9:00 PM">9:00 PM</option>
+      <option value="9:30 PM">9:30 PM</option>
+      <option value="10:00 PM">10:00 PM</option>       
+      <option value="10:30 PM">10:30 PM</option>
+      <option value="11:00 PM">11:00 PM</option>
+      <option value="11:30 PM">11:30 PM</option>
+  </select>
+  <span class="marked_days" >Mark open days</span>
+  <span class="uncheck_days">Don't forget to uncheck your off-day</span>
+<div class="for_checkbox">
+  <input type="checkbox" id="Days" value="Monday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day1">Monday</label><br>
+  <input type="checkbox" id="Days" value="tuesday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day2">Tuesday</label><br>
+  <input type="checkbox" id="Days" value="wednesday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day3">Wednesday</label><br>
+  <input type="checkbox" id="Days"  value="thursday" name="add_kitchen[kitchen_open_days]" >
+  <label class="week" for="day4">Thursday</label><br>
+  <input type="checkbox" id="Days" value="friday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day5">Friday</label><br>
+  <input type="checkbox" id="Days" value="saturday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day6">Saturday</label><br>
+  <input type="checkbox" id="Days" value="sunday" name="add_kitchen[kitchen_open_days]">
+  <label class="week" for="day7">Sunday</label><br>
 </div>
 
-
-
-<%end%>
-</div>
-<div class="footer_form">
-<button onclick="back()" class="back_bttn">Back</button><button onclick="next()"  class="next_bttn" >Next</button>
 </div>
 
-<script>
-function next(){
-    document.getElementById("kitchen_info_div").style.display = "none";
-    document.getElementById("kitchen_type_timings").style.display = "block";
-}
+<div id="kitchen_upload_images">
+<span class="upload_img">Upload images</span><br>
+<span class="kicthen_img" >Kitchen images</span><br>
+<span class="kitchen_sub" >Please upload atleast one facade shot (picture of the kitchen)</span>
+<input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]" multiple><br>
+<span class="food_img" >Food images </span><br>
+<span class="food_sub" >Please do not put images of raw ingredients</span>
+<input type="file" class="food_file" name="add_kitchen[food_images]" multiple>
+</div>
 
-</script>
+<button type="submit" class="signupbttn_form" >Submit</button>
 
+</div>
 
-
-
-
+</form>
 <script>
     let la = document.getElementById('latitude');
     let lo = document.getElementById('longitude');
