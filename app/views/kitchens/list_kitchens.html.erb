@@ -1,0 +1,17 @@
+<% @list_kitchens.each do |list_kitchen|%>
+<div class="whole-container">
+    <div class="image-container">
+    <% if list_kitchen['kitchen_images'] %>
+    <% img_path = "/uploads/add_kitchen/kitchen_images/"+list_kitchen['id'].to_s + "/"+ list_kitchen['kitchen_images'] %>
+    <img src="<%= img_path %>" alt="">
+    <% end %>
+    </div>
+    <div class="kitchen-content-container">
+        <p>Kitchen Name : <%= list_kitchen.Kitchen_name%></p>
+        <p>Kitchen Owner Name : <%= list_kitchen.kitchen_owner_name%></p>
+        <p>Kitchen Type : <%= list_kitchen.types_of_cuisines%></p>
+        <p>Kitchen Open Time : <%= list_kitchen.kitchen_open_time%></p>
+        <p>Kitchen Close Time : <%= list_kitchen.kitchen_close_time%></p>
+    </div>
+</div>
+<%end%>

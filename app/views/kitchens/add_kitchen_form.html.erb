@@ -38,7 +38,7 @@
     <span class="kitchen_details">Kitchen details<span><br>
       <span class="kitchen_sub_details">Name, address and location</span>
       
-      <form action="/add_kitchen" method="post">
+      <form action="/create_kitchen" method="post" enctype="multipart/form-data">
         <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
         <input type="text" placeholder="kitchen name" id="kitchen_name" required name="add_kitchen[Kitchen_name]"><br>
         <input type="text" placeholder="kitchen complete address" id="kitchen_address" required name="add_kitchen[kitchen_address]"><br><br>
@@ -62,8 +62,7 @@
 <div id="kitchen_type_timings">
        <span class="kitchen_type_div_heading">Kitchen Type & Timings</span><br>
        <span class="establishment_type">Establishment type<span><br>
-       <input type="radio" class="radio_type" name="add_kitchen[establishment_type]" value="delivery_only" required><label for="radio">Delivery only</label>
-       <span class="delivery_only">Delivery only</span>
+       <input type="radio" class="radio_type" name="add_kitchen[establishment_type]" value="delivery_only" required><label for="radio" class="delivery_only" >Delivery only</label>
        <br>
        <span class="types_kitchens">Types Of Kitchens</span><br>
        <span class="sub_types">Select options which best describe food your serve</span><br>
@@ -199,14 +198,13 @@
 <span class="upload_img">Upload images</span><br>
 <span class="kicthen_img" >Kitchen images</span><br>
 <span class="kitchen_sub" >Please upload atleast one facade shot (picture of the kitchen)</span>
-<input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]" multiple><br>
+<input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]"><br>
 <span class="food_img" >Food images </span><br>
 <span class="food_sub" >Please do not put images of raw ingredients</span>
-<input type="file" class="food_file" name="add_kitchen[food_images]" multiple>
+<input type="file" class="food_file" name="add_kitchen[food_images]">
 </div>
 
-<button type="submit" class="signupbttn_form" >Submit</button>
-
+<button type="submit" class="signupbttn_form">Submit</button>
 </div>
 
 </form>

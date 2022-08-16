@@ -8,34 +8,36 @@
 <% cur_user = session[:current_user_id] %>
 <ul id="nav_bar">
   <li><a href="home">Home</a></li>
-  <li><a href="#">Kitchen</a></li>
+  <li><a href="list_kitchens">Kitchen</a></li>
   <li><a href="#buyer_heading">Buyer</a></li>
   <li><a href="#seller_heading">Seller</a></li>
   <li><a href="about_us">About us</a></li>
   <%if cur_user.nil? %>
    
   <% else %>
-  <li><a  onclick="showDiv()"><%=image_tag 'avatar.png' ,alt:'logo', class: 'nav_login_img',id: 'toggle_btn' %></a></li> 
+  <li>
+      <a  onclick="showDiv()">
+         <%=image_tag 'avatar.png' ,alt:'logo', class: 'nav_login_img',id: 'toggle_btn' %>
+      </a>
+  </li> 
   <%end%>                     
 </ul>
 
 <%if @presence==1%>
-<div id="showDiv">
-<div class="dropbtn" id="dropbtn_toggle">
-   <div class="dropbtn_content signed_in">Signed in As</div>
-   <div class="dropbtn_content first_name"><i class="fa fa-user"></i><%= @user.firstname%></div>
-   <div class="dropbtn_content log_out"><%= link_to destroy_session_path, method: :delete do %>
+
+   <div class="dropbtn" id="dropbtn_toggle">
+      <div class="dropbtn_content signed_in">Signed in As</div>
+      <div class="dropbtn_content first_name"><i class="fa fa-user"></i><%= @user.firstname%></div>
+      <div class="dropbtn_content log_out"><%= link_to destroy_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>Log out</div>
-</div>
-  <% end %>
-</div>
+   </div>
+<% end %>
 
 <script>
-   var x = document.getElementById("dropbtn");
    function showDiv(){
       let element =document.getElementById("dropbtn_toggle");
       element.classList.toggle("dropbtn");
-   }
+   }  
 </script>
 
 <div>
@@ -165,9 +167,7 @@
         document.getElementById("second_child_grid3").style.display = "none";   
         document.getElementById("third_child_grid1").style.display = "none";
         document.getElementById("third_child_grid2").style.display = "none";
-        document.getElementById("third_child_grid3").style.display = "none"; 
-       
-
+        document.getElementById("third_child_grid3").style.display = "none";        
 }
 
 function get2() {
@@ -180,7 +180,6 @@ function get2() {
         document.getElementById("third_child_grid1").style.display = "none";
         document.getElementById("third_child_grid2").style.display = "none";
         document.getElementById("third_child_grid3").style.display = "none"; 
-
 }
 
 function get3() {

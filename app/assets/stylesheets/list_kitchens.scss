@@ -1,0 +1,20 @@
+.whole-container{
+    width: 80%;
+    height: 30vh;
+    border:1px solid black;
+    margin-left: 10%;
+    position: relative;
+}
+.image-container{
+    background-color: red;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+}
+.kitchen-content-container{
+    position: absolute;
+    margin-left: 20%;
+    width: 80%;
+    height: 100%;
+    background-color: aquamarine;
+}

@@ -7,12 +7,18 @@ class KitchensController < ApplicationController
   def create
     add_kitchen = AddKitchen.new(kitchen_params)
     if add_kitchen.save
+      p '========================'
+      p params[:add_kitchen][:kitchen_images]
+      p "dafd"
       render plain: true
     else
       render plain: false
     end
   end
-
+  def list_kitchens
+    @list_kitchens = AddKitchen.all
+    render "kitchens/list_kitchens"
+  end
   private
 
   def kitchen_params
@@ -35,8 +41,8 @@ class KitchensController < ApplicationController
       :kitchen_open_time,
       :kitchen_close_time,
       :kitchen_open_days,
-      kitchen_images: [],
-      food_images: []
+      :kitchen_images,
+      :food_images
     )
   end
 end
