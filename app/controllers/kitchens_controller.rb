@@ -7,10 +7,8 @@ class KitchensController < ApplicationController
   def create
     add_kitchen = AddKitchen.new(kitchen_params)
     if add_kitchen.save
-      p '========================'
       p params[:add_kitchen][:kitchen_images]
-      p "dafd"
-      render plain: true
+      redirect_to '/home'
     else
       render plain: false
     end
@@ -42,7 +40,7 @@ class KitchensController < ApplicationController
       :kitchen_close_time,
       :kitchen_open_days,
       :kitchen_images,
-      :food_images
+      :kitchen_owner_image
     )
   end
 end

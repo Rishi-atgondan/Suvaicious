@@ -5,4 +5,5 @@ class AddKitchen < ApplicationRecord
   has_one_attached :food_images
 
   mount_uploader :kitchen_images, ImageUploader
+  mount_uploader :kitchen_owner_image, ImageUploader
 end

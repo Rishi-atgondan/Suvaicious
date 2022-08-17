@@ -196,15 +196,15 @@
 
 <div id="kitchen_upload_images">
 <span class="upload_img">Upload images</span><br>
-<span class="kicthen_img" >Kitchen images</span><br>
+<span class="kicthen_img" >Kitchen image</span><br>
 <span class="kitchen_sub" >Please upload atleast one facade shot (picture of the kitchen)</span>
 <input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]"><br>
-<span class="food_img" >Food images </span><br>
-<span class="food_sub" >Please do not put images of raw ingredients</span>
-<input type="file" class="food_file" name="add_kitchen[food_images]">
+<span class="food_img" >Kitchen Owner Image </span><br>
+<span class="food_sub" >Please upload Image with plain background</span>
+<input type="file" class="food_file" name="add_kitchen[kitchen_owner_image]">
 </div>
 
-<button type="submit" class="signupbttn_form">Submit</button>
+<button type="submit" class="signupbttn_form" onclick="alert_msg()" >Submit</button>
 </div>
 
 </form>
@@ -223,6 +223,11 @@
         la.value = position.coords.latitude;
         lo.value = position.coords.longitude;
     }
+
+  function alert_msg(){
+    alert("Your Kitchen Has been added")
+  }
+
     </script>
 
     

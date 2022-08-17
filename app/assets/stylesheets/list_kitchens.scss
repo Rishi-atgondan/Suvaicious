@@ -1,20 +1,158 @@
-.whole-container{
-    width: 80%;
-    height: 30vh;
-    border:1px solid black;
-    margin-left: 10%;
-    position: relative;
+// .whole-container{
+//     width: 80%;
+//     height: 33.5%;
+//     border:1px solid black;
+//     margin-left: 10%;
+//     margin-top: 5%;
+// }
+// .image-container{
+//     height: 200px;
+//     width: 235px;
+//     background-color: aqua;
+// }
+// .added_images{
+//     height: 250px;
+//     width: 270px;
+// }
+// .kitchen-content-container{
+//     margin-left: 25%;
+//     margin-top: -200px;
+//     width:auto;
+//     height:auto;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kitchen_list{
+    height: 270px;
+    width: 1290px;
+    margin-top: 50px;
+    margin-left: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #919191;
+    
+    // box-shadow: 0rem 0rem #EC652B inset;
+    // transition: 0.5s all ease-in-out;
+    // border:1px solid black ;
 }
-.image-container{
-    background-color: red;
-    width: 20%;
-    height: 100%;
+// .kitchen_list:hover{
+//     box-shadow: -35rem 0rem #EC652B inset;
+//     border-radius: 0;
+//     transition: 0.5s all ease-in-out;
+//     border-radius: 10px;
+//     border: 1px solid black;
+// }
+
+
+
+.kitchen_image_placer{
+    height: 230px;
+    width: 245px;
+    background-color: black;
+    margin-top: 20px;
+    position:absolute;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.list_kitchen_1{
+    height: 230px;
+    width: 245px;
+    border-radius: 10px;
+    border: none;
+}
+
+.kitchen_name{
+    margin-left: 291px;
+    margin-top: 22px;
+    font-size: 35px;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
     position: absolute;
 }
-.kitchen-content-container{
+
+.star_rating{
+    height: 20px;
+    width: 20px;
+    margin-top: 80px;
+    margin-left: 300px;
     position: absolute;
-    margin-left: 20%;
-    width: 80%;
-    height: 100%;
-    background-color: aquamarine;
+}
+
+.rating_km{
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    margin-left: 325px;
+    margin-top: 82px;
+    font-size: 15px;
+    position: absolute;
+}
+
+.user_profile{
+    height: 40px;
+    width: 40px;
+    margin-top: 80px;
+    margin-left: 308px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.owner_pic{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.kitchen_owner_name{
+    font-family: 'inter-regular';
+    margin-top: 85px;
+    margin-left: 360px;
+    position: absolute;
+    font-size: 25px;
+}
+.kitchen_type_{
+    font-size: 16px;
+    margin-top: 36px;
+    margin-left: 299px;
+    position: absolute;
+    color: #919191;
+    font-family: 'inter-regular';
+}
+
+.kitchen_timings{
+    font-family: 'inter-regular';
+    margin-top: 202px;
+    margin-left: 306px;
+    font-size: 15px;
+    position: absolute;
+}
+
+.time{
+    color: #919191;
+    font-size: 18px;
+    font-family: 'inter-regular';
+
+}
+
+.kitchen_addresss{
+    font-size: 14px;
+    font-family: 'inter-regular';
+    margin-top: 130px;
+    width: 250px;
+    margin-left: 310px;
+    position: absolute;
 }
