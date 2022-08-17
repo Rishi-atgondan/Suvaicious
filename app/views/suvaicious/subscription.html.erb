@@ -62,7 +62,15 @@
         <span class="price_expectation">Price Expectations</span>
         <%= form.number_field "subscription[price_expectations]", id: "price_expectations", class: "input_user11" , :required => true %><button class="inr">INR</button>
     </div>
-        <%= form.submit "Submit", class:"signupbttn"%>
+        <%# <%= form.submit "Submit", class:"signupbttn" onclick="submit_msg" %> %>
+        <button class="signupbttn" onclick="submit_msg()" >Submit</button>
     <% end %>
     
 </div>
+
+<script>
+
+function submit_msg() {
+    alert("Your form has been submitted")
+}
+</script>
