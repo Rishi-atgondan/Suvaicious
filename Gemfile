@@ -60,3 +60,5 @@ gem 'rubocop', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'carrierwave', '~> 2.0'
+gem 'dotenv-rails'
+
