@@ -12,10 +12,12 @@ class KitchensController < ApplicationController
       render plain: false
     end
   end
+
   def list_kitchens
     @list_kitchens = AddKitchen.all
-    render "kitchens/list_kitchens"
+    render 'kitchens/list_kitchens'
   end
+
   private
 
   def kitchen_params
