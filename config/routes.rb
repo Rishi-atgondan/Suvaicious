@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root 'suvaicious#index'
-  get '/' , to:'suvaicious/'
+  get '/' , to:'suvaicious#index'
   get 'list_kitchens' , to:'kitchens#list_kitchens'
   get 'kitchens/add_kitchen'
   get 'sessions/login'
