@@ -9,6 +9,7 @@
 
 
 <% @list_kitchens.each do |list_kitchen|%>
+<div>
 <div class="kitchen_list">
   <% if list_kitchen['kitchen_images'] %>
   <% img_path = "/uploads/add_kitchen/kitchen_images/"+list_kitchen['id'].to_s + "/"+ list_kitchen['kitchen_images'] %>

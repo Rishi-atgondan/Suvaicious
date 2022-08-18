@@ -1,61 +1,22 @@
-// .whole-container{
-//     width: 80%;
-//     height: 33.5%;
-//     border:1px solid black;
-//     margin-left: 10%;
-//     margin-top: 5%;
-// }
-// .image-container{
-//     height: 200px;
-//     width: 235px;
-//     background-color: aqua;
-// }
-// .added_images{
-//     height: 250px;
-//     width: 270px;
-// }
-// .kitchen-content-container{
-//     margin-left: 25%;
-//     margin-top: -200px;
-//     width:auto;
-//     height:auto;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .kitchen_list{
     height: 270px;
     width: 1290px;
     margin-top: 50px;
     margin-left: 60px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #919191;
-    
+    box-shadow: 0px 0px 10px 0px #919191 outset;
+
     // box-shadow: 0rem 0rem #EC652B inset;
-    // transition: 0.5s all ease-in-out;
-    // border:1px solid black ;
+    transition: 0.5s all ease-in-out;
+    border:1px solid black ;
 }
-// .kitchen_list:hover{
-//     box-shadow: -35rem 0rem #EC652B inset;
-//     border-radius: 0;
-//     transition: 0.5s all ease-in-out;
-//     border-radius: 10px;
-//     border: 1px solid black;
-// }
+.kitchen_list:hover{
+    box-shadow: -35rem 0rem #EC652B inset;
+    border-radius: 0;
+    transition: 0.5s all ease-in-out;
+    border-radius: 10px;
+    border: 1px solid black;
+}
 
 
 

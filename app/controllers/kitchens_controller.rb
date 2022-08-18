@@ -5,9 +5,8 @@ class KitchensController < ApplicationController
   def add_kitchen; end
 
   def create
-    add_kitchen = AddKitchen.new(kitchen_params)
-    if add_kitchen.save
-      p params[:add_kitchen][:kitchen_images]
+    @add_kitchen = AddKitchen.new(kitchen_params)
+    if @add_kitchen.save
       redirect_to '/home'
     else
       render plain: false
