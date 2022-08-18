@@ -11,7 +11,7 @@
 </div>
 
 <div id= "whole_sub_form">
-     <%= form_with(url: "/subscription", method: "POST") do |form|%>
+     <%= form_with(url: "/subscription", method: "POST ")  do |form|%>
     <div>
         <span class="name">Name<span class="required_symbol">*</span></span>
        <%= form.text_field "subscription[name]", id: "name", placeholder: "Enter your Name",class: "input_user1" ,:required => true  %><br> 
@@ -38,8 +38,8 @@
     </div>
      <div>
         <span class="menu_preference">Any menu preference</span>
-        <select name="subscription[menu_preference]" class="input_user7" id="menu_preference">
-            <option value="all">All</option>
+        <select name="subscription[menu_preference]" class="input_user7" id="menu_preference" required >
+            <option value="all" >All</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
             <option value="dinner">Dinner</option>
@@ -62,8 +62,7 @@
         <span class="price_expectation">Price Expectations</span>
         <%= form.number_field "subscription[price_expectations]", id: "price_expectations", class: "input_user11" , :required => true %><button class="inr">INR</button>
     </div>
-        <%# <%= form.submit "Submit", class:"signupbttn" onclick="submit_msg" %> %>
-        <button class="signupbttn" onclick="submit_msg()" >Submit</button>
+        <button type="submit" class="signupbttn" >Submit</button>
     <% end %>
     
 </div>

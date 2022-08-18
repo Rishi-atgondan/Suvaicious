@@ -1,4 +1,5 @@
 
+
 <ul id="nav_bar">
   <li><a href="home">Home</a></li>
   <li><a href="list_kitchens">Kitchen</a></li>
@@ -7,9 +8,11 @@
   <li><a href="about_us">About us</a></li>                   
 </ul>
 
+<a href="/home"><%=image_tag 's_logo.png' ,alt:'logo', class:'kitchen_logo' %></a>
+
+<input class="search" type="search" placeholder="Search For kitchens and foods" >
 
 <% @list_kitchens.each do |list_kitchen|%>
-<div>
 <div class="kitchen_list">
   <% if list_kitchen['kitchen_images'] %>
   <% img_path = "/uploads/add_kitchen/kitchen_images/"+list_kitchen['id'].to_s + "/"+ list_kitchen['kitchen_images'] %>
@@ -40,22 +43,6 @@
 
 
 
-<!-- <% @list_kitchens.each do |list_kitchen|%>
-<div class="whole-container">
-    <div class="image-container">
-    <% if list_kitchen['kitchen_images'] %>
-    <% img_path = "/uploads/add_kitchen/kitchen_images/"+list_kitchen['id'].to_s + "/"+ list_kitchen['kitchen_images'] %>
-    <img class="added_images" src="<%= img_path %>" alt="">
-    <% end %>
-    </div>
-    <div class="kitchen-content-container">
-        <p>Kitchen Name : <%= list_kitchen.Kitchen_name%></p>
-        <p>Kitchen Owner Name : <%= list_kitchen.kitchen_owner_name%></p>
-        <p>Kitchen Type : <%= list_kitchen.types_of_cuisines%></p>
-        <p>Kitchen Open Time : <%= list_kitchen.kitchen_open_time%></p>
-        <p>Kitchen Close Time : <%= list_kitchen.kitchen_close_time%></p>
-    </div>
-</div>
-<%end%> -->
+
 
 

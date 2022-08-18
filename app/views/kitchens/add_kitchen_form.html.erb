@@ -42,17 +42,17 @@
         <span class="map_sub_heading">This will help you to find your kitchen address</span> <br>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.024363409294!2d80.2404200147403!3d12.970292790856771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d6d804e0793%3A0xf310a6ebd244b2d0!2sGlobal%20Infocity%20Park%2C%20Ambedkar%20Nagar%2C%20Perungudi%2C%20Chennai%2C%20Tamil%20Nadu%20600096!5e0!3m2!1sen!2sin!4v1659933408710!5m2!1sen!2sin" width="650" height="300" border-radius="5px" margin-top="10px" position="absolute" style="border:0; margin-top: 20px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>        
         <span class="detect">To detect the latitude and longitude</span> <%=image_tag 'gps.jpg' ,alt:'gps', class: 'gps'%> <button id="detect_bttn" onclick="getLocation()" >Detect</button><br>
-        <input id="latitude" type="float" placeholder="Latitude" required name="add_kitchen[latitude]"> <input id="longitude"  type="float" placeholder="Longitude" name="add_kitchen[longitude]"><br>
+        <input id="latitude" type="float" placeholder="Latitude" required name="add_kitchen[latitude]"> <input id="longitude"  type="float" placeholder="Longitude" required name="add_kitchen[longitude]"><br>
         <span class="sub_address">Kitchen address details</span>
-        <input class="nation" type="text" placeholder="Nation" required name="add_kitchen[nation]"> <input class="pincode" type="tel" pattern="[0-9]+" minlength="6" maxlength="6"  placeholder="Pin-code" name="add_kitchen[pincode]"><br>
-        <input class="state" type="text" placeholder="State" required name="add_kitchen[state]"> <input class="city" type="text" placeholder="City" name="add_kitchen[city]"><br>
+        <input class="nation" type="text" placeholder="Nation" required name="add_kitchen[nation]"> <input class="pincode" type="tel" pattern="[0-9]+" minlength="6" maxlength="6"  placeholder="Pin-code" name="add_kitchen[pincode]" required ><br>
+        <input class="state" type="text" placeholder="State" required name="add_kitchen[state]"> <input class="city" type="text" placeholder="City" name="add_kitchen[city]" required ><br>
         <span class="contact_kitchen" >Contact number at Kitchen</span><br>
         <span class="contact_sub">Your customers will call on this number for general enquiries</span><br>
         <input class="ph_number" type="tel" minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Phone Number" required name="add_kitchen[kitchen_owner_no]"><br>
         <span class="kitchen_owner_contact">Kitchen owner details</span><br>
         <span class="contact_owner_sub">These will be used to share revenue related communications</span><br>
         <input class="kitchen_ph_number" type="tel" minlength="10" maxlength="10" pattern="[0-9]+" placeholder="Phone Number" required name="add_kitchen[kitchen_ph_no]"><br>
-        <input class="owner_name" type="text" placeholder="Owner Name" required name="add_kitchen[kitchen_owner_name]"> <input class="owner_mail"  type="email" placeholder="Owner Mail id" name="add_kitchen[kitchen_owner_mailID]"><br>
+        <input class="owner_name" type="text" placeholder="Owner Name" required name="add_kitchen[kitchen_owner_name]"> <input class="owner_mail"  type="email" placeholder="Owner Mail id" name="add_kitchen[kitchen_owner_mailID]" required ><br>
 </div>
 
 <div id="kitchen_type_timings">
@@ -62,7 +62,7 @@
        <br>
        <span class="types_kitchens">Types Of Kitchens</span><br>
        <span class="sub_types">Select options which best describe food your serve</span><br>
-       <select id="kitchen_drpdwn" name="add_kitchen[types_of_cuisines]">
+       <select id="kitchen_drpdwn" name="add_kitchen[types_of_cuisines]" required>
            <option value="Andhra">Andhra</option>
            <option value="North-indian">North-Indian</option>
            <option value="South-indian">South-indian</option>
@@ -98,6 +98,7 @@
         <option value="11:30 AM">11:30 AM</option>
         <option value="12:00 PM">12:00 PM</option>
         <option value="12:30 PM">12:30 PM</option>
+        <option value="1:00 PM">1:00 PM</option>
         <option value="1:30 PM">1:30 PM</option>
         <option value="2:00 PM">2:00 PM</option>
         <option value="2:30 PM">2:30 PM</option>
@@ -194,10 +195,10 @@
 <span class="upload_img">Upload images</span><br>
 <span class="kitchen_img" >Kitchen image</span><br>
 <span class="kitchen_sub" >Please upload atleast one facade shot (picture of the kitchen)</span>
-<input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]"><br>
+<input type="file" class="kitchen_file" name="add_kitchen[kitchen_images]" required ><br>
 <span class="food_img" >Kitchen Owner Image </span><br>
 <span class="food_sub" >Please upload Image with plain background</span>
-<input type="file" class="food_file" name="add_kitchen[kitchen_owner_image]">
+<input type="file" class="food_file" name="add_kitchen[kitchen_owner_image]" required >
 </div>
 
 <button type="submit" class="signupbttn_form" onclick="alert_msg()" >Submit</button>

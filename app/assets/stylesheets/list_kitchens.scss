@@ -1,21 +1,74 @@
+*{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+ }
+ 
+ #nav_bar {
+      margin-left: 60%;
+      font-size: 20px;
+      list-style: none;
+      display: flex;
+  }
+ 
+  #nav_bar li{
+      margin-left: 5%;
+      text-decoration: none;
+      font-weight: 400;
+      color: black;
+  }
+ 
+  #nav_bar li a{
+      text-decoration: none;
+      color: black;
+  }
+ 
+  #nav_bar li a:hover{
+      color: #EC652B;
+  }
+
+  .search{
+    position: absolute;
+    font-family: 'inter-regular';
+    margin-top: -55px;
+    margin-left: 243px;
+    height: 50px;
+    width: 400px;
+    border-radius: 14px;
+    border: 1px solid black;
+    padding-left: 34px;
+}
+
+.kitchen_logo{
+    height: 65px;
+    width: 70px;
+    margin-top: -60px;
+    position: absolute;
+    margin-left: 18px;
+}
+
+.kitchen_logo:hover{
+    border-radius: 145px;
+    box-shadow: 0px 0px 3px 3px #919191;
+}
+
 .kitchen_list{
     height: 270px;
     width: 1290px;
     margin-top: 50px;
     margin-left: 60px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #919191 outset;
-
+    cursor: pointer;
     // box-shadow: 0rem 0rem #EC652B inset;
-    transition: 0.5s all ease-in-out;
-    border:1px solid black ;
+    // transition: 0.5s all ease-in-out;
 }
 .kitchen_list:hover{
-    box-shadow: -35rem 0rem #EC652B inset;
-    border-radius: 0;
-    transition: 0.5s all ease-in-out;
-    border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 0px 0px 20px 0px #919191 ;
+    // box-shadow: -35rem 0rem #EC652B inset;
+    // border-radius: 0;
+    // transition: 0.5s all ease-in-out;
+    // border-radius: 10px;
+    // border: 1px solid black;
 }
 
 
