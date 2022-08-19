@@ -13,7 +13,7 @@
 
 ### Features
 
-|:---------------------------|
+|:--------------------------:|
 |1. Register - Completed     |
 |2. Login - Completed        |
 |3. Github - Completed       |
