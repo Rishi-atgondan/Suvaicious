@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'kitchens/add_kitchen'
   get 'sessions/login'
   get 'users/new'
+  get 'list_kitchens' to: 'kitchens'
   get '/home', to: 'suvaicious#index'
   get 'about_us', to: 'suvaicious#about_us'
   get '/login', to: 'sessions#login', as: 'login'

@@ -16,7 +16,11 @@
 </div>
 <div class="start_div">
 <span class="inside_div" >To get started with registration</span><br>
+ <%if session[:current_user_id].nil?%>
+ <button class="click_here" onclick="show_alert()">Click here</button>
+ <%else%>
  <a href="add_kitchen_form"><button class="click_here">Click Here</button></a>
+ <%end%>
 </div>
 <div class="work_info">
 <span class="heading_div">How it Works?</span>
@@ -41,4 +45,9 @@
    </div>
 </div>
 
-
+<script>
+   function show_alert(){
+      alert("please login to add kitchen");
+      window.location.href="/home";
+   }
+</script>
