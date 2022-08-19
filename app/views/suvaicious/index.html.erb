@@ -71,7 +71,13 @@
 
 <div><iframe class="buyers_video" src="https://www.youtube.com/embed/SKqYoyN99lY" title="YouTube video player" width="600" height="370" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div><span class="registration_heading">Save time & money with subscription orders!</span></div>
-        <div><a href="subscription  " ><button class="subscription_button">Plan your monthly/weekly order</button></a></div>
+        <div>
+        <%if session[:current_user_id].nil?%>
+         <button class="subscription_button" onclick="show_alert()">Plan your monthly/weekly order</button>
+         <%else%>
+        <a href="subscription"><button class="subscription_button">Plan your monthly/weekly order</button></a>
+         <%end%>
+        </div>
         <div class="buyers_testimonial"><span>Buyers Testimonial</span></div>
 </div>
 
@@ -194,6 +200,12 @@ function get3() {
         document.getElementById("third_child_grid2").style.display = "block";
         document.getElementById("third_child_grid3").style.display = "block"; 
 }
+
+   function show_alert(){
+      alert("please login to get subscriptions");
+      window.location.href="/home";
+   }
+
 </script>
 
 <div class="seller_whole_div">
