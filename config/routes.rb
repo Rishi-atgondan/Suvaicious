@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'suvaicious#index'
+  get '/', to: 'suvaicious#index'
+  get 'list_kitchens', to: 'kitchens#list_kitchens'
   get 'kitchens/add_kitchen'
   get 'sessions/login'
   get 'users/new'
@@ -17,7 +20,7 @@ Rails.application.routes.draw do
   get 'add_kitchen', to: 'kitchens#add_kitchen'
   get 'add_kitchen_form', to: 'kitchens#add_kitchen_form'
 
-  post '/add_kitchen', to: 'kitchens#create'
+  post '/create_kitchen', to: 'kitchens#create'
   resources :users
   resources :sessions, only: %i[login create destroy]
 

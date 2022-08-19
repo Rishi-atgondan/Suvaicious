@@ -1,0 +1,48 @@
+
+
+<ul id="nav_bar">
+  <li><a href="home">Home</a></li>
+  <li><a href="list_kitchens">Kitchen</a></li>
+  <li><a href="home#buyer_heading">Buyer</a></li>
+  <li><a href="home#seller_heading">Seller</a></li>
+  <li><a href="about_us">About us</a></li>                   
+</ul>
+
+<a href="/home"><%=image_tag 's_logo.png' ,alt:'logo', class:'kitchen_logo' %></a>
+
+<input class="search" type="search" placeholder="Search For kitchens and foods" >
+
+<% @list_kitchens.each do |list_kitchen|%>
+<div class="kitchen_list">
+  <% if list_kitchen['kitchen_images'] %>
+  <% img_path = "/uploads/add_kitchen/kitchen_images/"+list_kitchen['id'].to_s + "/"+ list_kitchen['kitchen_images'] %>
+  <div class="kitchen_image_placer">
+    <img class="list_kitchen_1" src="<%= img_path %>" alt="Kitchen_image">
+    <% end %>
+  </div>
+  
+      <span class="kitchen_name"><%= list_kitchen.Kitchen_name%></span>
+      <%=image_tag 'star.png' ,alt:'rating', class:'star_rating' %><span class="rating_km">4.0 (1k+) &nbsp; •43 mins</span><br>
+      
+      <div class="user_profile">
+        
+        <% if list_kitchen['kitchen_owner_image'] %>
+        <% owner_img_path = "/uploads/add_kitchen/kitchen_owner_image/"+ list_kitchen['id'].to_s + "/"+list_kitchen['kitchen_owner_image'] %>
+       
+        <img src="<%= owner_img_path %>" class="owner_pic" alt="Kitchen_owner_image">
+        <%end%>
+      </div><span class="kitchen_owner_name"><%= list_kitchen.kitchen_owner_name%></span>
+      <span class="kitchen_type_"><%= list_kitchen.types_of_cuisines%></span>
+      <span class="kitchen_addresss"><%= list_kitchen.kitchen_address%></span>
+      <span class="kitchen_timings"><span class="time">Timings :</span><%= list_kitchen.kitchen_open_time%> - <%= list_kitchen.kitchen_close_time%></span>
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+

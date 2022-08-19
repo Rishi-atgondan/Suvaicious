@@ -5,12 +5,17 @@ class KitchensController < ApplicationController
   def add_kitchen; end
 
   def create
-    add_kitchen = AddKitchen.new(kitchen_params)
-    if add_kitchen.save
-      render plain: true
+    @add_kitchen = AddKitchen.new(kitchen_params)
+    if @add_kitchen.save
+      redirect_to '/home'
     else
       render plain: false
     end
+  end
+
+  def list_kitchens
+    @list_kitchens = AddKitchen.all
+    render 'kitchens/list_kitchens'
   end
 
   private
@@ -35,8 +40,8 @@ class KitchensController < ApplicationController
       :kitchen_open_time,
       :kitchen_close_time,
       :kitchen_open_days,
-      kitchen_images: [],
-      food_images: []
+      :kitchen_images,
+      :kitchen_owner_image
     )
   end
 end

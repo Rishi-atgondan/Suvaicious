@@ -10,6 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20_220_817_055_739) do
+  create_table 'add_kitchens', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
+    t.string 'Kitchen_name'
+    t.string 'kitchen_address'
+    t.string 'latitude'
+    t.string 'longitude'
+    t.string 'nation'
+    t.string 'state'
+    t.integer 'pincode'
+    t.string 'city'
+    t.bigint 'kitchen_ph_no'
+    t.bigint 'kitchen_owner_no'
+    t.string 'kitchen_owner_name'
+    t.string 'kitchen_owner_mailID'
+    t.string 'establishment_type'
+    t.string 'types_of_cuisines'
+    t.string 'kitchen_open_time'
+    t.string 'kitchen_close_time'
+    t.string 'kitchen_open_days'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'kitchen_images'
+    t.string 'kitchen_owner_image'
+
 ActiveRecord::Schema.define(version: 2022_08_17_055739) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -62,6 +86,7 @@ ActiveRecord::Schema.define(version: 2022_08_17_055739) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "kitchen_images"
     t.string "kitchen_owner_image"
+>>>>>>> main
   end
 
   create_table "subscriptions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -89,6 +114,8 @@ ActiveRecord::Schema.define(version: 2022_08_17_055739) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+
 end

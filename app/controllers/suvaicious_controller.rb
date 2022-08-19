@@ -22,7 +22,7 @@ class SuvaiciousController < ApplicationController
   def sub_create
     subp = Subscription.new(subscription_params)
     if subp.save
-      render plain: 'Success'
+      redirect_to '/home'
     else
       render plain: 'Failed to create account!'
     end

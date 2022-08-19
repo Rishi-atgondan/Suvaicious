@@ -1,10 +1,11 @@
 <style>
   body {
-    background-image: url(<%=asset_path"background_image"%>);
+    background-image: url(<%=asset_path "background_image"%>);
     background-repeat: no-repeat;
     background-size: 100%;
   }
 </style>
+
 <% cur_user = session[:current_user_id] %>
 <ul id="nav_bar">
   <li><a href="home">Home</a></li>
@@ -15,27 +16,29 @@
   <%if cur_user.nil? %>
    
   <% else %>
-  <li><a  onclick="showDiv()"><%=image_tag 'avatar.png' ,alt:'logo', class: 'nav_login_img',id: 'toggle_btn' %></a></li> 
+  <li>
+      <a  onclick="showDiv()">
+         <%=image_tag 'avatar.png' ,alt:'logo', class: 'nav_login_img',id: 'toggle_btn' %>
+      </a>
+  </li> 
   <%end%>                     
 </ul>
 
 <%if @presence==1%>
-<div id="showDiv">
-<div class="dropbtn" id="dropbtn_toggle">
-   <div class="dropbtn_content signed_in">Signed in As</div>
-   <div class="dropbtn_content first_name"><i class="fa fa-user"></i><%= @user.firstname%></div>
-   <div class="dropbtn_content log_out"><%= link_to destroy_session_path, method: :delete do %>
+
+   <div class="dropbtn" id="dropbtn_toggle">
+      <div class="dropbtn_content signed_in">Signed in As</div>
+      <div class="dropbtn_content first_name"><i class="fa fa-user"></i><%= @user.firstname%></div>
+      <div class="dropbtn_content log_out"><%= link_to destroy_session_path, method: :delete do %>
       <i class="fa fa-sign-out"></i>Log out</div>
-</div>
-  <% end %>
-</div>
+   </div>
+<% end %>
 
 <script>
-   var x = document.getElementById("dropbtn");
    function showDiv(){
       let element =document.getElementById("dropbtn_toggle");
       element.classList.toggle("dropbtn");
-   }
+   }  
 </script>
 
 <div>
@@ -171,9 +174,7 @@
         document.getElementById("second_child_grid3").style.display = "none";   
         document.getElementById("third_child_grid1").style.display = "none";
         document.getElementById("third_child_grid2").style.display = "none";
-        document.getElementById("third_child_grid3").style.display = "none"; 
-       
-
+        document.getElementById("third_child_grid3").style.display = "none";        
 }
 
 function get2() {
@@ -186,7 +187,6 @@ function get2() {
         document.getElementById("third_child_grid1").style.display = "none";
         document.getElementById("third_child_grid2").style.display = "none";
         document.getElementById("third_child_grid3").style.display = "none"; 
-
 }
 
 function get3() {
@@ -281,10 +281,10 @@ function show3(){
        <p class="footer_about"><span class=apos>"</span> Creating a healthy India by <br> serving home food and <br> Empower woman to earn from <br> their own kitchen.<span class=apos>"</span></p>
       <span class="app_suvaicious" >APP Suvaicious</span>
       <div  class="suvaicious_cons" >
-          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOODT&C.pdf" target="_blank" >Terms & conditions</a><br>
-          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_Privacy%20Policy.pdf" target="_blank" >Privacy policy</a><br>
-          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_Cancellation%20and%20Refund%20Policy.pdf" target="_blank" >Refund & cancellation</a><br>
-          <a class="link_suv" href="https://www.appgoodfood.in/AppGOODFOOD_FAQ.pdf" target="_blank" >FAQ</a>
+          <a class="link_suv" rel="noopener" href="https://www.appgoodfood.in/AppGOODFOODT&C.pdf" target="_blank" >Terms & conditions</a><br>
+          <a class="link_suv" rel="noopener" href="https://www.appgoodfood.in/AppGOODFOOD_Privacy%20Policy.pdf" target="_blank" >Privacy policy</a><br>
+          <a class="link_suv" rel="noopener" href="https://www.appgoodfood.in/AppGOODFOOD_Cancellation%20and%20Refund%20Policy.pdf" target="_blank" >Refund & cancellation</a><br>
+          <a class="link_suv" rel="noopener" href="https://www.appgoodfood.in/AppGOODFOOD_FAQ.pdf" target="_blank" >FAQ</a>
       </div>
       <span class="get_in_touch" >Get In Touch</span>
       <div class="information">
